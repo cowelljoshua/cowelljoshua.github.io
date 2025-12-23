@@ -1,0 +1,224 @@
+/* ============================================
+   RESUME SECTION STYLES
+   Clean professional resume layout
+   ============================================ */
+
+.resume {
+  background: #ffffff;
+  padding: 60px 40px;
+  min-height: 100vh;
+}
+
+.resume__container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px;
+  border: 1px solid #d0d0d0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Download Section */
+.resume__download-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.resume__download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.resume__download-btn:hover {
+  background: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.resume__download-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Header */
+.resume__header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #000;
+}
+
+.resume__name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.resume__contact {
+  font-size: 12px;
+  color: #333;
+  letter-spacing: 0.3px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.resume__contact span {
+  display: inline;
+}
+
+/* Sections */
+.resume__section {
+  margin-bottom: 20px;
+}
+
+.resume__section-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #000;
+}
+
+/* Education */
+.resume__education-item {
+  margin-bottom: 12px;
+}
+
+.resume__item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2px;
+  gap: 20px;
+}
+
+.resume__item-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+  flex: 1;
+}
+
+.resume__item-date {
+  font-size: 11px;
+  color: #555;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.resume__item-subtitle {
+  font-size: 11px;
+  font-style: italic;
+  color: #333;
+  margin: 2px 0 0 0;
+}
+
+.resume__gpa {
+  font-size: 11px;
+  color: #000;
+  margin: 2px 0 0 0;
+}
+
+.resume__company {
+  font-size: 11px;
+  color: #000;
+  margin: 0;
+  display: inline;
+}
+
+/* Experience Items */
+.resume__experience-item {
+  margin-bottom: 16px;
+}
+
+/* Bullets */
+.resume__bullets {
+  list-style: disc;
+  margin: 6px 0 0 16px;
+  padding: 0;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #333;
+}
+
+.resume__bullets li {
+  margin-bottom: 4px;
+  margin-left: 0;
+}
+
+.resume__bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.resume__bullets strong {
+  color: #000;
+  font-weight: 700;
+}
+
+/* Projects */
+.resume__project-item {
+  margin-bottom: 12px;
+}
+
+.resume__project-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 6px 0;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resume {
+    padding: 30px 20px;
+  }
+
+  .resume__container {
+    padding: 20px;
+  }
+
+  .resume__name {
+    font-size: 22px;
+  }
+
+  .resume__contact {
+    font-size: 11px;
+  }
+
+  .resume__section-title {
+    font-size: 10px;
+  }
+
+  .resume__item-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .resume__item-date {
+    text-align: left;
+  }
+

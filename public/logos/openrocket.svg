@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="OpenRocket logo">
+  <defs>
+    <linearGradient id="orBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5d54e9"/>
+      <stop offset="100%" stop-color="#23a6d5"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#orBg)"/>
+  <g fill="#fff" opacity="0.9">
+    <path d="M32 8c4 6 6 12 6 20 0 4-.6 8-1.8 12L32 37l-4.2 3C26.6 36 26 32 26 28c0-8 2-14 6-20z"/>
+    <path d="M26 34l-8 8 5-1 3 5 6-6z"/>
+    <path d="M38 34l8 8-5-1-3 5-6-6z"/>
+  </g>
+</svg>

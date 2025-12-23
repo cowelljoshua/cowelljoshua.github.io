@@ -1,0 +1,115 @@
+/* ============================================
+   SECTION COMPONENT STYLES
+   Consistent section layout and spacing
+   ============================================ */
+
+.section {
+  position: relative;
+  padding: var(--section-padding) 0;
+}
+
+/* Background variants */
+.section--light {
+  background: var(--color-off-white);
+}
+
+.section--dark {
+  background: var(--gradient-hero);
+  color: var(--color-white);
+}
+
+.section--dark .section-title {
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section--dark .section-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Section with gradient overlay */
+.section--gradient {
+  background: var(--gradient-subtle);
+}
+
+/* Section container */
+.section__container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+/* Section header */
+.section__header {
+  text-align: center;
+  margin-bottom: var(--space-4xl);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section__header--left {
+  text-align: left;
+  margin-left: 0;
+}
+
+.section__eyebrow {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-highlight);
+  margin-bottom: var(--space-md);
+}
+
+.section__title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-lg);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section__subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-dark-gray);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Section content */
+.section__content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section decorations */
+.section__decoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section__container {
+    padding: 0 var(--space-lg);
+  }
+
+  .section__header {
+    margin-bottom: var(--space-3xl);
+  }
+}
