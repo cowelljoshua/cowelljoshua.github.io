@@ -67,8 +67,7 @@ const Experience = () => {
   return (
     <Section id="experience" className="experience">
       <div className="experience__header">
-        <span className="experience__eyebrow">Experience</span>
-        <h2 className="experience__title">Where I've Made an Impact</h2>
+        <h2 className="experience__title">Experience</h2>
         <p className="experience__subtitle">
           Building systems for nuclear, aerospace, and defense applications.
         </p>

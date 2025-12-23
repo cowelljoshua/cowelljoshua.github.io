@@ -33,34 +33,100 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "Predictive Wear Model",
+      description:
+        "Developed a Python-based predictive wear model improving component-life accuracy by over 75%.",
+      fullDescription:
+        "Engineered a sophisticated Python-based predictive wear model for critical reactor components that addresses limitations in legacy analytical methods. Using advanced numerical techniques and statistical validation against historical performance data, the model achieves over 75% improvement in accuracy compared to previous approaches. The work involved developing multi-parameter algorithms that account for complex thermo-mechanical interactions, material fatigue mechanisms, and operational stress cycles. Automated the analysis pipeline to process continuous operational data, transforming a manual workflow that required hundreds of hours of computation into a streamlined process completing in minutes. The resulting tool enables nuclear operators to make data-driven decisions regarding maintenance schedules, component replacement strategies, and safe operating envelope optimization, directly supporting safer and more efficient reactor operations.",
+      gradient: "robotics",
+      tags: ["Python", "Predictive Modeling", "Nuclear Engineering", "Data Analysis"],
+      details: [
+        "Improved component-life accuracy by over 75% through advanced algorithm development",
+        "Transformed 800+ hour manual process into automated pipeline completing in minutes",
+        "Integrated continuous operational data processing for real-time insights",
+        "Enabled predictive maintenance strategies and safe operating condition optimization",
+      ],
+      icon: "layers",
+      coverImage: "/cowellPortfolio/nuclear_reactor1.webp",
+      coverZoom: 1.2,
+      coverScaleY: 1,
+    },
+    {
+      id: 2,
+      title: "Automated Calculation System",
+      description:
+        "Engineered a Python pipeline to automate complex engineering calculations, reducing manual effort.",
+      fullDescription:
+        "Developed a comprehensive automation framework that eliminates manual engineering calculations and documentation workflows. The system leverages Python with advanced data structures and multidimensional array processing to handle complex, iterative calculations that previously required extensive spreadsheet work and manual verification. Implemented data versioning and configuration management to ensure calculation traceability and reproducibility, critical for regulatory compliance in nuclear environments. Integrated automated report generation that produces professionally formatted technical documentation with embedded visualizations, analysis tables, and engineering conclusions. The system processes calculations that scale from thousands to millions of data points, enabling engineers to focus on interpretation and decision-making rather than tedious computational grunt work. This architecture significantly reduces human error, improves consistency across analyses, and accelerates the engineering review cycle from weeks to days.",
+      gradient: "cfd",
+      tags: ["Python", "Automation", "Data Analysis", "Engineering Documentation"],
+      details: [
+        "Automated workflow reducing 800+ hours of manual calculations to minutes",
+        "Implemented data versioning for traceability and regulatory compliance",
+        "Generated professional technical reports with embedded analysis and visualizations",
+        "Enabled analysis of millions of data points with consistent methodology",
+      ],
+      icon: "flow",
+      coverImage: "/cowellPortfolio/nuclear_reactor2.webp",
+      coverZoom: 1.2,
+      coverScaleY: 1,
+    },
+    {
+      id: 3,
+      title: "Heat Exchanger CFD Analysis",
+      description:
+        "Optimized heat exchanger design using advanced CFD simulations and thermal analysis techniques.",
+      fullDescription:
+        "Conducted detailed computational fluid dynamics simulations using ANSYS Fluent to analyze and optimize heat exchanger performance across multiple design configurations. The work involved comprehensive mesh generation and validation, establishing appropriate boundary conditions to represent realistic operating scenarios, and executing simulations across a range of flow rates and thermal conditions. Generated detailed contour plots revealing temperature distributions, velocity profiles, and turbulence characteristics throughout the heat exchanger geometry, enabling identification of performance bottlenecks and optimization opportunities. Produced streamline visualizations to trace fluid behavior and identify regions of flow separation, recirculation, or stagnation that could negatively impact heat transfer efficiency. Comparative analysis of multiple design iterations provided quantitative data on heat transfer coefficients, pressure drop, and overall thermal effectiveness. The simulation results informed redesign recommendations that improve both thermal performance and manufacturing feasibility, demonstrating the value of computational analysis in accelerating the design iteration cycle.",
+      gradient: "thermal",
+      tags: ["CFD", "ANSYS Fluent", "Heat Transfer", "Fluid Dynamics"],
+      details: [
+        "Executed multi-configuration CFD simulations across various operating conditions",
+        "Generated comprehensive flow and thermal visualizations for engineering analysis",
+        "Identified performance optimization opportunities through streamline and contour analysis",
+        "Delivered quantitative data on heat transfer efficiency and pressure drop",
+      ],
+      icon: "flow",
+      coverImage: "/cowellPortfolio/cover_for_heat_exchanger.png",
+      coverZoom: 1.2,
+      coverScaleY: 1.5,
+      images: [
+        "/cowellPortfolio/heat_exchanger_massflow_contour.png",
+        "/cowellPortfolio/heat_exchanger_velocity_streamlines.png",
+        "/cowellPortfolio/heat_exchanger_mesh.png",
+      ],
+    },
+    {
+      id: 4,
       title: "Unmanned Aerial Vehicle (UAV)",
       description:
-        "Engineered a custom UAV with 3D-printed parts for rapid customization and repairs.",
+        "Engineered a modular UAV with 3D-printed components for rapid customization and precision payload delivery.",
       fullDescription:
-        "Designed and built a custom unmanned aerial vehicle utilizing additive manufacturing for quick field repairs and customization. Conducted aerodynamic analysis and validated control surface performance through CFD simulations.",
+        "Led the complete design and fabrication of a custom unmanned aerial vehicle platform, leveraging 3D-printing technology to enable rapid prototyping, field customization, and streamlined component replacement. The modular architecture allows quick reconfiguration of the airframe for different mission profiles without requiring extensive rework or external manufacturing delays. Conducted comprehensive ANSYS CFD analysis of the airframe design, optimizing body contours and control surface geometry to minimize drag while maintaining structural stability across the operational envelope. Validated aerodynamic performance through detailed flow simulations and pressure coefficient analysis to ensure predictable handling characteristics. Engineered an automated payload deployment system with precision actuators and control logic capable of releasing payloads with high positional accuracy to strike 5-foot target zones. The deployment system incorporates fail-safes and testing protocols to ensure reliable operation across multiple repeated cycles. Integration testing verified compatibility between airframe, propulsion, avionics, and payload systems, ensuring seamless operation during field missions.",
       gradient: "aerospace",
-      tags: ["CAD", "3D Printing", "ANSYS CFD", "Control Systems"],
+      tags: ["CAD", "3D Printing", "ANSYS CFD", "Control Systems", "Payload Systems"],
       details: [
-        "Engineered custom UAV with 3D-printed parts to support customizability and quick repairs",
-        "Conducted ANSYS CFD simulation to validate control surface performance",
-        "Developed and programmed a payload-deployment system to accurately hit a 5-foot wide target",
+        "Designed modular airframe with 3D-printed components for rapid field customization and repairs",
+        "Optimized aerodynamics through ANSYS CFD analysis across operational envelope",
+        "Engineered automated payload deployment system with precision accuracy",
+        "Integrated and tested complete system across airframe, propulsion, and payload subsystems",
       ],
       icon: "rocket",
     },
     {
-      id: 2,
-      title: "High-Powered Rocket",
+      id: 5,
+      title: "Liberty Rocketry Team",
       description:
-        "Built a two-stage rocket that reached over 2,500 feet utilizing custom recovery system.",
+        "Directed structural analysis and testing for high-powered rockets that achieved top placement in international competitions.",
       fullDescription:
-        "Designed and constructed a competition-grade two-stage rocket for Liberty Rocketry. The rocket featured custom propulsion, recovery, and avionics systems. Led structural analysis and testing to ensure mission success.",
+        "Served as Chief Systems Engineer for Liberty University's competitive rocketry team, leading the structural analysis, verification, and validation of a high-powered rocket that achieved 9th place out of 156 international teams at the 2024 Spaceport America Cup. Orchestrated cross-functional collaboration between propulsion, avionics, recovery, and aerodynamics subsystems, ensuring seamless integration and synchronized decision-making across the entire vehicle design. Utilized ANSYS Mechanical for detailed finite element analysis of critical load-bearing structures, validating that all components meet stress requirements across dynamic flight phases from launch acceleration through recovery. Conducted fluid-structure interaction studies on control fins and aerodynamic surfaces to ensure structural stability under transonic flight conditions. Executed flight simulations using RocketPy and OpenRocket to predict trajectory, altitude performance, recovery sequence timing, and parachute deployment dynamics. Facilitated rigorous integration testing and pre-flight verification procedures to ensure launch readiness, safety compliance, and mission success. Coordinated technical documentation and design reviews with university faculty and competition judges, demonstrating thoroughness in engineering methodology and attention to detail.",
       gradient: "thermal",
-      tags: ["Rocketry", "SolidWorks", "RocketPy", "Recovery Systems"],
+      tags: ["Rocketry", "Structural Analysis", "ANSYS", "Simulation", "Systems Engineering"],
       details: [
-        "Built a two-stage rocket that reached over 2,500 feet",
-        "Utilized custom recovery system designed by the team",
-        "Performed structural analysis using ANSYS and flight simulations using RocketPy and OpenRocket",
-        "Led integration testing and pre-flight validation procedures",
+        "Led as Chief Systems Engineer coordinating across all rocket subsystems and integration",
+        "Performed detailed structural analysis using ANSYS Mechanical for component verification",
+        "Executed flight simulations with RocketPy and OpenRocket for trajectory and performance validation",
+        "Achieved 9th place out of 156 international teams at 2024 Spaceport America Cup",
       ],
       icon: "rocket",
     },
@@ -183,14 +249,29 @@ const Projects = () => {
             onKeyDown={(e) => e.key === "Enter" && setSelectedProject(project)}
           >
             <div className="project-card__visual">
-              <div
-                className={`project-card__gradient project-card__gradient--${project.gradient}`}
-              >
-                <span className="project-card__icon">
-                  {getIcon(project.icon)}
-                </span>
-              </div>
-              <div className="project-card__overlay"></div>
+              {project.coverImage ? (
+                <img
+                  src={project.coverImage}
+                  alt={project.title}
+                  style={{ 
+                    width: "100%", 
+                    height: "100%", 
+                    objectFit: "contain",
+                    transform: `scale(${project.coverZoom || 1}, ${project.coverScaleY || 1})`
+                  }}
+                />
+              ) : (
+                <>
+                  <div
+                    className={`project-card__gradient project-card__gradient--${project.gradient}`}
+                  >
+                    <span className="project-card__icon">
+                      {getIcon(project.icon)}
+                    </span>
+                  </div>
+                  <div className="project-card__overlay"></div>
+                </>
+              )}
             </div>
             <div className="project-card__content">
               <h3 className="project-card__title">{project.title}</h3>
@@ -245,13 +326,26 @@ const Projects = () => {
             </button>
 
             <div className="modal__visual">
-              <div
-                className={`modal__gradient project-card__gradient--${selectedProject.gradient}`}
-              >
-                <span className="modal__icon">
-                  {getIcon(selectedProject.icon)}
-                </span>
-              </div>
+              {selectedProject.images && selectedProject.images.length > 0 ? (
+                <div className="modal__images">
+                  {selectedProject.images.map((image, index) => (
+                    <img
+                      key={index}
+                      src={image}
+                      alt={`${selectedProject.title} - Image ${index + 1}`}
+                      className="modal__image"
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div
+                  className={`modal__gradient project-card__gradient--${selectedProject.gradient}`}
+                >
+                  <span className="modal__icon">
+                    {getIcon(selectedProject.icon)}
+                  </span>
+                </div>
+              )}
               <div className="modal__overlay"></div>
             </div>
 

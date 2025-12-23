@@ -23,7 +23,7 @@ import ContactPage from "./pages/ContactPage";
  */
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/cowellPortfolio/">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />

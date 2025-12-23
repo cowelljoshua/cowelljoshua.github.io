@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: flex-end;
   overflow: hidden;
-  background-image: url("/src/static/homepage.jpg");
+  background-image: url("/homepage.jpg");
   background-size: cover;
   background-position: center bottom;
   background-attachment: fixed;

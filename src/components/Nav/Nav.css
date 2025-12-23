@@ -9,7 +9,7 @@
   top: var(--space-lg);
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000;
+  z-index: 3000;
   padding: 0;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }

@@ -17,7 +17,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/src/static/about.png");
+  background-image: url("/about.png");
   background-position: center;
   background-repeat: no-repeat;
   pointer-events: none;
