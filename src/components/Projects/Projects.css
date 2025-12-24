@@ -229,7 +229,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-xl);
+  padding: 100px var(--space-xl) var(--space-xl);
   opacity: 0;
   visibility: hidden;
   transition: all var(--transition-base);
@@ -286,7 +286,7 @@
 /* Modal visual */
 .modal__visual {
   position: relative;
-  height: 200px;
+  height: 350px;
 }
 
 .modal__images {
@@ -299,8 +299,9 @@
 .modal__image {
   flex: 1;
   height: 100%;
+  width: 100%;
   object-fit: cover;
-  border-radius: var(--radius-md);
+  border-radius: 0;
 }
 
 .modal__gradient {

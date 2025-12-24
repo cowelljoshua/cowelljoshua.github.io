@@ -21,7 +21,7 @@ const About = () => {
     },
     {
       name: "ANSYS",
-      logo: "/logos/ansys.svg",
+      logo: "/logos/ANSYS_logo.png",
     },
     {
       name: "RocketPy",
@@ -30,10 +30,6 @@ const About = () => {
     {
       name: "OpenRocket",
       logo: "/logos/openrocket.png",
-    },
-    {
-      name: "Onshape",
-      logo: "/logos/onshape.png",
     },
     {
       name: "AFT Fathom",
@@ -53,10 +49,10 @@ const About = () => {
 
   // Personal photos - add your own images to public/personal/ folder
   const personalPhotos = [
-    { src: "/cowellPortfolio/personal/photo1.jpg", alt: "Adventure photo 1" },
-    { src: "/cowellPortfolio/personal/photo2.jpg", alt: "Adventure photo 2" },
-    { src: "/cowellPortfolio/personal/photo3.jpg", alt: "Adventure photo 3" },
-    { src: "/cowellPortfolio/personal/photo4.jpg", alt: "Adventure photo 4" },
+    { src: "/personal/photo1.jpg", alt: "Caving adventure", caption: "Caving in Tennessee" },
+    { src: "/personal/photo2.jpg", alt: "Sailing trip", caption: "Sailing on the Outer Banks" },
+    { src: "/personal/photo3.jpg", alt: "Backpacking trip", caption: "Backpacking in the Blue Ridge Mountains" },
+    { src: "/personal/photo4.jpg", alt: "Surfing session", caption: "Surfing in Wilmington, NC" },
   ];
 
   return (
@@ -73,20 +69,14 @@ const About = () => {
           {/* Large Image Cell - Rocket */}
           <div className="bento__cell bento__cell--hero">
             <img 
-              src="/cowellPortfolio/public/about.jpg" 
+              src="/about.jpg" 
               alt="Rocket Launch" 
               className="bento__hero-image"
             />
-            <div className="bento__hero-overlay">
-              <span className="bento__hero-label">Aerospace & Defense</span>
-            </div>
           </div>
 
           {/* Bio Cell */}
           <div className="bento__cell bento__cell--bio">
-            <h2 className="bento__bio-title">
-              Overview
-            </h2>
             <p className="bento__bio-text">
               I'm a Mechanical Engineering student at Liberty University with
               hands-on experience in rocketry, thermal hydraulics, and advanced
@@ -137,7 +127,6 @@ const About = () => {
             <div className="bento__hobbies">
               {hobbies.map((hobby) => (
                 <span key={hobby.name} className="bento__hobby-tag">
-                  <span className="bento__hobby-icon">{hobby.icon}</span>
                   {hobby.name}
                 </span>
               ))}
@@ -172,6 +161,9 @@ const About = () => {
                   transform: index === 2 ? 'scale(1.7)' : 'scale(1)'
                 }}
               />
+              <div className="bento__photo-caption">
+                <span>{photo.caption}</span>
+              </div>
             </div>
           ))}
         </div>

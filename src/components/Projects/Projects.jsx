@@ -47,7 +47,7 @@ const Projects = () => {
         "Enabled predictive maintenance strategies and safe operating condition optimization",
       ],
       icon: "layers",
-      coverImage: "/cowellPortfolio/nuclear_reactor1.webp",
+      coverImage: "/nuclear_reactor1.webp",
       coverZoom: 1.2,
       coverScaleY: 1,
     },
@@ -67,7 +67,7 @@ const Projects = () => {
         "Enabled analysis of millions of data points with consistent methodology",
       ],
       icon: "flow",
-      coverImage: "/cowellPortfolio/nuclear_reactor2.webp",
+      coverImage: "/nuclear_reactor2.webp",
       coverZoom: 1.2,
       coverScaleY: 1,
     },
@@ -87,14 +87,9 @@ const Projects = () => {
         "Delivered quantitative data on heat transfer efficiency and pressure drop",
       ],
       icon: "flow",
-      coverImage: "/cowellPortfolio/cover_for_heat_exchanger.png",
+      coverImage: "/cover_for_heat_exchanger.png",
       coverZoom: 1.2,
       coverScaleY: 1.5,
-      images: [
-        "/cowellPortfolio/heat_exchanger_massflow_contour.png",
-        "/cowellPortfolio/heat_exchanger_velocity_streamlines.png",
-        "/cowellPortfolio/heat_exchanger_mesh.png",
-      ],
     },
     {
       id: 4,
@@ -112,7 +107,7 @@ const Projects = () => {
         "Integrated and tested complete system across airframe, propulsion, and payload subsystems",
       ],
       icon: "rocket",
-      coverImage: "/cowellPortfolio/UAV_v1.JPG",
+      coverImage: "/UAV_v1.JPG",
       coverZoom: 1.3,
       coverScaleY: 1,
     },
@@ -132,7 +127,7 @@ const Projects = () => {
         "Achieved 9th place out of 156 international teams at 2024 Spaceport America Cup",
       ],
       icon: "rocket",
-      coverImage: "/cowellPortfolio/rocketry_project_pic.png",
+      coverImage: "/rocketry_project_pic.png",
       coverZoom: 1,
       coverScaleY: 1,
     },
@@ -303,7 +298,7 @@ const Projects = () => {
               </div>
               {project.id === 3 && (
                 <a
-                  href="/cowellPortfolio/josh_cowell_heat_exchanger_paper.pdf"
+                  href="/josh_cowell_heat_exchanger_paper.pdf"
                   download
                   className="project-card__download"
                   onClick={(e) => e.stopPropagation()}
@@ -325,7 +320,7 @@ const Projects = () => {
               )}
               {project.id === 5 && (
                 <a
-                  href="/cowellPortfolio/trinity_technical_report.pdf"
+                  href="/trinity_technical_report.pdf"
                   download
                   className="project-card__download"
                   onClick={(e) => e.stopPropagation()}
@@ -376,17 +371,17 @@ const Projects = () => {
             </button>
 
             <div className="modal__visual">
-              {selectedProject.images && selectedProject.images.length > 0 ? (
-                <div className="modal__images">
-                  {selectedProject.images.map((image, index) => (
-                    <img
-                      key={index}
-                      src={image}
-                      alt={`${selectedProject.title} - Image ${index + 1}`}
-                      className="modal__image"
-                    />
-                  ))}
-                </div>
+              {selectedProject.coverImage ? (
+                <img
+                  src={selectedProject.coverImage}
+                  alt={selectedProject.title}
+                  className="modal__image"
+                  style={{ 
+                    width: "100%", 
+                    height: "100%", 
+                    objectFit: "cover"
+                  }}
+                />
               ) : (
                 <div
                   className={`modal__gradient project-card__gradient--${selectedProject.gradient}`}
@@ -424,7 +419,7 @@ const Projects = () => {
 
               {selectedProject.id === 3 && (
                 <a
-                  href="/cowellPortfolio/josh_cowell_heat_exchanger_paper.pdf"
+                  href="/josh_cowell_heat_exchanger_paper.pdf"
                   download
                   className="modal__download-btn"
                 >
@@ -445,7 +440,7 @@ const Projects = () => {
               )}
               {selectedProject.id === 5 && (
                 <a
-                  href="/cowellPortfolio/trinity_technical_report.pdf"
+                  href="/trinity_technical_report.pdf"
                   download
                   className="modal__download-btn"
                 >
