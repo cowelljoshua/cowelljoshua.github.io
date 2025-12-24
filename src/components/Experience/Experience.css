@@ -61,14 +61,7 @@
 .experience__title {
   font-size: var(--font-size-4xl);
   font-weight: var(--font-weight-semibold);
-  background: linear-gradient(
-    135deg,
-    var(--color-primary) 0%,
-    var(--color-accent) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-dark-gray);
   margin-bottom: var(--space-md);
 }
 
@@ -95,11 +88,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(
-    to bottom,
-    var(--color-highlight),
-    var(--color-light-gray)
-  );
+  background: var(--color-light-gray);
 }
 
 /* Timeline item */
@@ -121,13 +110,13 @@
   width: 16px;
   height: 16px;
   background: var(--color-white);
-  border: 3px solid var(--color-highlight);
+  border: 3px solid var(--color-dark-gray);
   border-radius: 50%;
   z-index: 1;
 }
 
 .experience__item:first-child .experience__dot {
-  background: var(--color-highlight);
+  background: var(--color-dark-gray);
 }
 
 /* Timeline card */
@@ -153,17 +142,42 @@
   gap: var(--space-md);
 }
 
-.experience__company {
+.experience__role {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-semibold);
   color: var(--color-primary);
   margin-bottom: var(--space-xs);
 }
 
-.experience__role {
+.experience__company {
   font-size: var(--font-size-base);
-  color: var(--color-highlight);
+  color: var(--color-dark-gray);
   font-weight: var(--font-weight-medium);
+}
+
+.experience__company--link {
+  text-decoration: none;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-primary);
+}
+
+.experience__company--link:hover {
+  text-decoration: underline;
+  gap: 8px;
+}
+
+.experience__company-icon {
+  transition: transform var(--transition-base);
+  opacity: 0.7;
+}
+
+.experience__company--link:hover .experience__company-icon {
+  transform: translate(2px, -2px);
+  opacity: 1;
 }
 
 .experience__date {
@@ -196,7 +210,7 @@
   top: 10px;
   width: 6px;
   height: 6px;
-  background: var(--color-highlight);
+  background: var(--color-dark-gray);
   border-radius: 50%;
 }
 

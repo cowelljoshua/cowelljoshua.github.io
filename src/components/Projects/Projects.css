@@ -25,14 +25,7 @@
 .projects__title {
   font-size: var(--font-size-4xl);
   font-weight: var(--font-weight-semibold);
-  background: linear-gradient(
-    135deg,
-    var(--color-primary) 0%,
-    var(--color-accent) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-dark-gray);
   margin-bottom: var(--space-md);
 }
 
@@ -188,6 +181,38 @@
 
 .project-card:hover .project-card__cta-icon {
   transform: translateX(4px);
+}
+
+/* Download button in card */
+.project-card__download {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-dark-gray);
+  background: var(--color-off-white);
+  border: 1px solid var(--color-light-gray);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.project-card__download:hover {
+  background: var(--color-dark-gray);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.project-card__download svg {
+  transition: transform var(--transition-fast);
+}
+
+.project-card__download:hover svg {
+  transform: translateY(2px);
 }
 
 /* ============================================
@@ -374,6 +399,38 @@
   padding: var(--space-sm) var(--space-md);
   background: rgba(15, 52, 96, 0.08);
   border-radius: var(--radius-full);
+}
+
+/* Modal download button */
+.modal__download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  padding: var(--space-md) var(--space-xl);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  background: var(--color-dark-gray);
+  border: none;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.modal__download-btn:hover {
+  background: var(--color-charcoal);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.modal__download-btn svg {
+  transition: transform var(--transition-fast);
+}
+
+.modal__download-btn:hover svg {
+  transform: translateY(2px);
 }
 
 /* Responsive */

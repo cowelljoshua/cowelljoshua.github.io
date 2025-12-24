@@ -29,9 +29,9 @@ const Nav = () => {
     <nav className="nav">
       <div className="nav__container">
         <Link to="/" className="nav__logo">
-          <span className="nav__logo-bracket">[</span>
+          <span className="nav__logo-bracket nav__logo-bracket--left">[</span>
           <span className="nav__logo-text">JC</span>
-          <span className="nav__logo-bracket">]</span>
+          <span className="nav__logo-bracket nav__logo-bracket--right">]</span>
         </Link>
 
         <button

@@ -38,21 +38,69 @@
 
 /* Logo */
 .nav__logo {
-  font-size: 1.5rem;
-  font-weight: var(--font-weight-bold);
-  color: var(--color-white);
-  font-family: "Courier New", monospace;
-  transition: all var(--transition-base);
   display: flex;
   align-items: center;
-  gap: 3px;
-  letter-spacing: 0.05em;
+  gap: 4px;
+  font-family: "JetBrains Mono", "Fira Code", "Consolas", monospace;
+  transition: all var(--transition-base);
+  position: relative;
 }
 
 .nav__logo-bracket {
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav__logo-bracket--left {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 1.75rem;
-  font-weight: 700;
+}
+
+.nav__logo-bracket--right {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.nav__logo:hover .nav__logo-bracket {
+  color: var(--color-white);
+}
+
+.nav__logo-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-white);
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.nav__logo:hover .nav__logo-text {
+  letter-spacing: 0.12em;
+}
+
+.nav__logo-initial {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--color-white);
+  font-family: "Georgia", "Times New Roman", serif;
+  transition: all 0.3s ease;
+  line-height: 1;
+}
+
+.nav__logo-initial--j {
+  margin-right: -3px;
+  z-index: 2;
+}
+
+.nav__logo-initial--c {
+  opacity: 0.85;
+  z-index: 1;
+}
+
+.nav__logo:hover .nav__logo-initial {
+  color: var(--color-highlight);
+}
+
+.nav__logo:hover .nav__logo-initial--c {
+  opacity: 1;
 }
 
 .nav__logo-text {

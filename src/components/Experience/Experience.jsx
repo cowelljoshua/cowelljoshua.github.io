@@ -26,6 +26,7 @@ const Experience = () => {
     },
     {
       company: "Liberty Rocketry (9th/156 international teams in 2024)",
+      website: "https://libertyrocketry.org",
       role: "Chief Systems Engineer",
       date: "June 2025 — Present",
       description: [
@@ -37,7 +38,7 @@ const Experience = () => {
       technologies: ["SolidWorks", "ANSYS", "MATLAB", "Systems Engineering"],
     },
     {
-      company: "Liberty Rocketry",
+      company: "Liberty University",
       role: "Lead Undergraduate Research Assistant",
       date: "Sep 2024 — Present",
       description: [
@@ -48,6 +49,7 @@ const Experience = () => {
     },
     {
       company: "Liberty Rocketry",
+      website: "https://libertyrocketry.org",
       role: "Senior Structural Engineer",
       date: "Sep 2023 — June 2025",
       description: [
@@ -80,8 +82,32 @@ const Experience = () => {
             <div className="experience__card">
               <div className="experience__card-header">
                 <div>
-                  <h3 className="experience__company">{exp.company}</h3>
-                  <p className="experience__role">{exp.role}</p>
+                  <h3 className="experience__role">{exp.role}</h3>
+                  {exp.website ? (
+                    <a 
+                      href={exp.website} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="experience__company experience__company--link"
+                    >
+                      {exp.company}
+                      <svg 
+                        className="experience__company-icon" 
+                        width="14" 
+                        height="14" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        strokeWidth="2"
+                      >
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  ) : (
+                    <p className="experience__company">{exp.company}</p>
+                  )}
                 </div>
                 <span className="experience__date">{exp.date}</span>
               </div>

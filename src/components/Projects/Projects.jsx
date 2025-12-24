@@ -53,9 +53,9 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Automated Calculation System",
+      title: "Nuclear Reactor Operating Limit Algorithm",
       description:
-        "Engineered a Python pipeline to automate complex engineering calculations, reducing manual effort.",
+        "Engineered a Python algorithm to calculate safe reactor operating conditions, reducing computation time from 800+ hours to minutes.",
       fullDescription:
         "Developed a comprehensive automation framework that eliminates manual engineering calculations and documentation workflows. The system leverages Python with advanced data structures and multidimensional array processing to handle complex, iterative calculations that previously required extensive spreadsheet work and manual verification. Implemented data versioning and configuration management to ensure calculation traceability and reproducibility, critical for regulatory compliance in nuclear environments. Integrated automated report generation that produces professionally formatted technical documentation with embedded visualizations, analysis tables, and engineering conclusions. The system processes calculations that scale from thousands to millions of data points, enabling engineers to focus on interpretation and decision-making rather than tedious computational grunt work. This architecture significantly reduces human error, improves consistency across analyses, and accelerates the engineering review cycle from weeks to days.",
       gradient: "cfd",
@@ -112,6 +112,9 @@ const Projects = () => {
         "Integrated and tested complete system across airframe, propulsion, and payload subsystems",
       ],
       icon: "rocket",
+      coverImage: "/cowellPortfolio/UAV_v1.JPG",
+      coverZoom: 1.3,
+      coverScaleY: 1,
     },
     {
       id: 5,
@@ -129,6 +132,9 @@ const Projects = () => {
         "Achieved 9th place out of 156 international teams at 2024 Spaceport America Cup",
       ],
       icon: "rocket",
+      coverImage: "/cowellPortfolio/rocketry_project_pic.png",
+      coverZoom: 1,
+      coverScaleY: 1,
     },
   ];
 
@@ -230,8 +236,8 @@ const Projects = () => {
   return (
     <Section id="projects" className="projects">
       <div className="projects__header">
-        <span className="projects__eyebrow">Projects</span>
-        <h2 className="projects__title">Engineering Excellence</h2>
+        {/* <span className="projects__eyebrow">Projects</span> */}
+        <h2 className="projects__title">Projects</h2>
         <p className="projects__subtitle">
           Select projects showcasing design innovation, analytical rigor, and
           real-world impact.
@@ -295,6 +301,50 @@ const Projects = () => {
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </div>
+              {project.id === 3 && (
+                <a
+                  href="/cowellPortfolio/josh_cowell_heat_exchanger_paper.pdf"
+                  download
+                  className="project-card__download"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Download Paper
+                </a>
+              )}
+              {project.id === 5 && (
+                <a
+                  href="/cowellPortfolio/trinity_technical_report.pdf"
+                  download
+                  className="project-card__download"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Download 2025 Report
+                </a>
+              )}
             </div>
           </article>
         ))}
@@ -371,6 +421,49 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
+
+              {selectedProject.id === 3 && (
+                <a
+                  href="/cowellPortfolio/josh_cowell_heat_exchanger_paper.pdf"
+                  download
+                  className="modal__download-btn"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Download Research Paper
+                </a>
+              )}
+              {selectedProject.id === 5 && (
+                <a
+                  href="/cowellPortfolio/trinity_technical_report.pdf"
+                  download
+                  className="modal__download-btn"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Download 2024 Technical Report
+                </a>
+              )}
             </div>
           </div>
         )}
