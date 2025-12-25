@@ -21,6 +21,13 @@ const Hero = () => {
 
   return (
     <section className="hero" id="hero">
+      {/* Mobile background image */}
+      <img 
+        src="/verticalhomepage.png" 
+        alt="" 
+        className="hero__mobile-bg"
+        aria-hidden="true"
+      />
       {/* Minimalist content at bottom */}
       <div className="hero__footer">
         <div className="hero__info">

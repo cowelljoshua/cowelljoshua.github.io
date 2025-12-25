@@ -2,8 +2,52 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
 }
 
 .layout__main {
   flex: 1;
+  background-color: #ffffff;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  /* Force Safari to repaint by creating new stacking context */
+  .layout {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    background-color: #ffffff !important;
+  }
+  
+  .layout__main {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    background-color: #ffffff !important;
+  }
+
+  /* Home page overrides - higher specificity */
+  .layout.layout--home {
+    min-height: 0;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1a1a2e !important;
+  }
+  
+  .layout__main.layout__main--home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e !important;
+  }
 }

@@ -239,6 +239,12 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  /* Hide the rocket images on mobile */
+  .experience::before,
+  .experience::after {
+    display: none;
+  }
+
   .experience__timeline::before {
     left: 7px;
   }
@@ -257,5 +263,26 @@
 
   .experience__date {
     align-self: flex-start;
+  }
+
+  .experience__card {
+    padding: var(--space-md);
+  }
+
+  .experience__role {
+    font-size: var(--font-size-lg);
+  }
+
+  .experience__company {
+    font-size: var(--font-size-sm);
+  }
+
+  .experience__description li {
+    font-size: var(--font-size-sm);
+    padding-left: var(--space-md);
+  }
+
+  .experience__tech-tag {
+    font-size: 0.7rem;
   }
 }

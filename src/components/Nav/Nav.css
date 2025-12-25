@@ -40,10 +40,31 @@
 .nav__logo {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
   font-family: "JetBrains Mono", "Fira Code", "Consolas", monospace;
   transition: all var(--transition-base);
   position: relative;
+  padding: 8px 16px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.nav__logo:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.nav__logo-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-white);
+  transition: all 0.3s ease;
+}
+
+.nav__logo:hover .nav__logo-icon {
+  color: var(--color-highlight);
 }
 
 .nav__logo-bracket {
@@ -258,44 +279,52 @@
 
   .nav__menu {
     position: fixed;
-    top: 60px;
-    left: var(--space-lg);
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
     right: auto;
-    width: 280px;
-    max-width: none;
+    width: 90vw;
+    max-width: 320px;
     height: auto;
     max-height: calc(100vh - 120px);
-    background: rgba(10, 14, 39, 0.95);
+    background: rgba(10, 14, 39, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    padding: var(--space-lg);
+    padding: var(--space-xl);
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-lg);
-    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-      visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(13, 110, 253, 0.2);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 20px;
     z-index: 999;
     opacity: 0;
     visibility: hidden;
+    transform: translateX(-50%) translateY(-10px);
   }
 
   .nav__menu--open {
     opacity: 1;
     visibility: visible;
+    transform: translateX(-50%) translateY(0);
   }
 
   .nav__links {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    gap: var(--space-sm);
   }
 
   .nav__link {
-    font-size: var(--font-size-sm);
-    padding: var(--space-xs) 0;
+    font-size: 1.1rem;
+    padding: var(--space-md) 0;
     width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .nav__link:last-child {
+    border-bottom: none;
   }
 
   .nav__cta {
@@ -307,11 +336,12 @@
 @media (max-width: 640px) {
   .nav {
     top: var(--space-md);
-    left: var(--space-md);
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .nav__container {
-    padding: var(--space-sm) var(--space-md);
+    padding: var(--space-sm) var(--space-lg);
   }
 
   .nav__logo {
@@ -324,7 +354,13 @@
   }
 
   .nav__menu {
-    left: var(--space-md) !important;
-    width: calc(100vw - 2 * var(--space-md)) !important;
+    width: calc(100vw - 32px);
+    max-width: none;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  
+  .nav__menu--open {
+    transform: translateX(-50%) translateY(0);
   }
 }

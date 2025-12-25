@@ -66,8 +66,8 @@
 
 /* Hero Image Cell - Large */
 .bento__cell--hero {
-  grid-column: span 7;
-  grid-row: span 3;
+  grid-column: span 5;
+  grid-row: span 2;
   background: #111;
 }
 
@@ -101,7 +101,7 @@
 
 /* Bio Cell */
 .bento__cell--bio {
-  grid-column: span 5;
+  grid-column: span 7;
   grid-row: span 2;
   padding: var(--space-2xl);
   background: var(--color-off-white);
@@ -134,7 +134,7 @@
 
 /* Skills Cell */
 .bento__cell--skills {
-  grid-column: span 5;
+  grid-column: span 8;
   grid-row: span 1;
   padding: var(--space-xl);
   background: var(--color-off-white);
@@ -196,7 +196,7 @@
 
 /* Highlights Cell */
 .bento__cell--highlights {
-  grid-column: span 3;
+  grid-column: span 4;
   grid-row: span 1;
   padding: var(--space-2xl);
   background: linear-gradient(135deg, rgba(74, 144, 217, 0.1) 0%, rgba(74, 144, 217, 0.05) 100%);
@@ -231,7 +231,7 @@
 
 /* Personal Life Header */
 .bento__cell--personal-header {
-  grid-column: span 9;
+  grid-column: span 12;
   grid-row: span 1;
   padding: var(--space-2xl);
   background: var(--color-off-white);
@@ -459,6 +459,25 @@
   .bento__cell--skills,
   .bento__cell--personal-header {
     padding: var(--space-lg);
+  }
+  
+  /* Fix skills grid for mobile */
+  .bento__skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-sm);
+  }
+  
+  .bento__skill {
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+    grid-column: span 1 !important;
+  }
+  
+  .bento__skill:nth-child(5),
+  .bento__skill:nth-child(6),
+  .bento__skill:nth-child(7) {
+    grid-column: span 1 !important;
   }
   
   .bento__cell--photo {

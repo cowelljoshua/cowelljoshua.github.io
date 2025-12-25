@@ -247,9 +247,16 @@
   max-height: 90vh;
   background: var(--color-white);
   border-radius: var(--radius-xl);
-  overflow: hidden;
+  overflow-y: auto; /* Allow the entire modal to scroll */
+  overflow-x: hidden;
   transform: scale(0.9) translateY(20px);
   transition: transform var(--transition-base);
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.modal::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .modal-overlay--open .modal {
@@ -287,6 +294,7 @@
 .modal__visual {
   position: relative;
   height: 350px;
+  flex-shrink: 0; /* Prevent image from shrinking */
 }
 
 .modal__images {
@@ -332,8 +340,7 @@
 /* Modal content */
 .modal__content {
   padding: var(--space-2xl);
-  max-height: 50vh;
-  overflow-y: auto;
+  /* Removed max-height and overflow - let modal handle scrolling */
 }
 
 .modal__title {

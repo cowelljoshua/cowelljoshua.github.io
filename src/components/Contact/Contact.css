@@ -88,11 +88,11 @@
 }
 
 .contact__availability {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
-  margin-top: var(--space-2xl);
+  margin-top: 60px;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   color: var(--color-mid-gray);

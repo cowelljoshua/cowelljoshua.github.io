@@ -108,6 +108,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: -webkit-fill-available;
 }
 
 body {
@@ -118,7 +119,18 @@ body {
   color: var(--color-charcoal);
   background-color: var(--color-white);
   overflow-x: hidden;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  margin: 0;
+  padding: 0;
 }
+
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+/* Background colors handled per-page via layout classes */
 
 /* ----- Typography Base ----- */
 h1,

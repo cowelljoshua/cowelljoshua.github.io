@@ -21,7 +21,7 @@ const Contact = () => {
           <div className="contact__divider"></div>
 
           <a
-            href="https://www.linkedin.com/in/joshua-cowell-0a1b3b1b4/"
+            href="https://www.linkedin.com/in/josh-d-cowell/"
             target="_blank"
             rel="noopener noreferrer"
             className="contact__linkedin-btn"
