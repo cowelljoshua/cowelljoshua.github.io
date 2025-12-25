@@ -43,7 +43,7 @@ const Hero = () => {
           <Button
             variant="light"
             size="lg"
-            onClick={handleViewProjects}
+            onClick={handleContactMe}
             icon={
               <svg
                 width="18"
@@ -56,14 +56,6 @@ const Hero = () => {
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             }
-          >
-            View Projects
-          </Button>
-          <Button
-            variant="ghost"
-            size="lg"
-            onClick={handleContactMe}
-            style={{ color: "rgba(255,255,255,0.9)" }}
           >
             Contact Me
           </Button>
