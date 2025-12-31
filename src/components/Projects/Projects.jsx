@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Section from "../Section";
 import "./Projects.css";
 
@@ -8,6 +8,7 @@ import "./Projects.css";
  */
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const overlayRef = useRef(null);
 
   // Close modal on escape key
   useEffect(() => {
@@ -18,12 +19,14 @@ const Projects = () => {
     return () => window.removeEventListener("keydown", handleEscape);
   }, []);
 
-  // Prevent body scroll when modal is open and scroll to top on mobile
+  // Prevent body scroll when modal is open and scroll overlay to top
   useEffect(() => {
     if (selectedProject) {
       document.body.style.overflow = "hidden";
-      // Scroll to top of page when modal opens on mobile
-      window.scrollTo(0, 0);
+      // Scroll overlay to top when modal opens
+      if (overlayRef.current) {
+        overlayRef.current.scrollTop = 0;
+      }
     } else {
       document.body.style.overflow = "";
     }
@@ -368,6 +371,7 @@ const Projects = () => {
 
       {/* Modal */}
       <div
+        ref={overlayRef}
         className={`modal-overlay ${
           selectedProject ? "modal-overlay--open" : ""
         }`}
