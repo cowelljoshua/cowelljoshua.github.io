@@ -32,7 +32,7 @@ const Hero = () => {
       <div className="hero__footer">
         <div className="hero__info">
           <h1 className="hero__name">
-            Joshua <span className="hero__highlight">Cowell</span>
+            Josh <span className="hero__highlight">Cowell</span>
           </h1>
           <p className="hero__tagline">
             Liberty University Mechanical Engineering 2027
