@@ -7,7 +7,7 @@ const Resume = () => {
         {/* Download Button */}
         <div className="resume__download-section">
           <a
-            href="/src/static/Official Josh Cowell's Resume.pdf"
+            href="/resume/Josh_Cowell's_Resume.pdf"
             download
             className="resume__download-btn"
           >

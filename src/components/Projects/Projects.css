@@ -471,18 +471,16 @@
     gap: var(--space-lg);
   }
 
-  /* Disable clicking on project cards on mobile */
+  /* Keep cards interactive on mobile */
   .project-card {
-    pointer-events: none;
-    cursor: default;
+    pointer-events: auto;
+    cursor: pointer;
   }
 
-  /* Hide "View Details" CTA on mobile */
   .project-card__cta {
-    display: none;
+    display: flex;
   }
 
-  /* Re-enable pointer events for download links */
   .project-card__download {
     pointer-events: auto;
   }
