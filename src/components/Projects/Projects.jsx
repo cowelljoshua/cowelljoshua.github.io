@@ -9,7 +9,7 @@ import "./Projects.css";
  */
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
-  const overlayRef = useRef(null);
+  const modalRef = useRef(null);
 
   // Close modal on escape key
   useEffect(() => {
@@ -20,20 +20,46 @@ const Projects = () => {
     return () => window.removeEventListener("keydown", handleEscape);
   }, []);
 
-  // Prevent body scroll when modal is open and scroll overlay to top
+  // Prevent body scroll when modal is open
   useEffect(() => {
     if (selectedProject) {
-      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      // Store current scroll position
+      const scrollY = window.scrollY;
+      
+      // Prevent body scroll
       document.body.style.overflow = "hidden";
-      // Scroll overlay to top when modal opens
-      if (overlayRef.current) {
-        overlayRef.current.scrollTop = 0;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.left = "0";
+      document.body.style.right = "0";
+      document.body.style.width = "100%";
+      
+      // Reset modal scroll to top when it opens
+      if (modalRef.current) {
+        modalRef.current.scrollTop = 0;
       }
     } else {
+      // Restore scroll position when closing
+      const scrollY = document.body.style.top;
       document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
+      document.body.style.width = "";
+      
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || "0", 10) * -1);
+      }
     }
+    
     return () => {
       document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
+      document.body.style.width = "";
     };
   }, [selectedProject]);
 
@@ -374,14 +400,17 @@ const Projects = () => {
       {/* Modal - rendered via portal to document.body */}
       {createPortal(
         <div
-          ref={overlayRef}
           className={`modal-overlay ${
             selectedProject ? "modal-overlay--open" : ""
           }`}
           onClick={() => setSelectedProject(null)}
         >
           {selectedProject && (
-            <div className="modal" onClick={(e) => e.stopPropagation()}>
+            <div 
+              ref={modalRef}
+              className="modal" 
+              onClick={(e) => e.stopPropagation()}
+            >
               <button
                 className="modal__close"
                 onClick={() => setSelectedProject(null)}

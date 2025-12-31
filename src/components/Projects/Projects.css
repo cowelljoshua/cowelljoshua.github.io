@@ -471,92 +471,20 @@
     gap: var(--space-lg);
   }
 
-  /* Mobile: Full-screen fixed overlay - completely override desktop */
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    display: none; /* Hidden by default */
-    align-items: stretch;
-    justify-content: stretch;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    background: #ffffff; /* Solid white, no transparency */
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    z-index: 9999;
-    opacity: 1;
-    visibility: visible;
+  /* Disable clicking on project cards on mobile */
+  .project-card {
+    pointer-events: none;
+    cursor: default;
   }
 
-  .modal-overlay--open {
-    display: block; /* Show when open */
-    opacity: 1;
-    visibility: visible;
+  /* Hide "View Details" CTA on mobile */
+  .project-card__cta {
+    display: none;
   }
 
-  /* Modal fills overlay completely, no transforms */
-  .modal {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    min-height: auto;
-    max-height: none;
-    margin: 0;
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
-    transform: none !important;
-    overflow: visible;
-    background: #ffffff;
-  }
-
-  .modal-overlay--open .modal {
-    transform: none !important;
-  }
-
-  .modal__visual {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    min-height: 200px;
-    flex-shrink: 0;
-  }
-
-  .modal__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .modal__content {
-    padding: var(--space-lg);
-    padding-bottom: calc(var(--space-3xl) + env(safe-area-inset-bottom, 20px));
-  }
-
-  .modal__title {
-    font-size: var(--font-size-2xl);
-  }
-
-  .modal__close {
-    position: fixed;
-    top: env(safe-area-inset-top, 16px);
-    right: var(--space-md);
-    z-index: 10000;
-    background: rgba(0, 0, 0, 0.7);
-    width: 44px;
-    height: 44px;
-  }
-
-  .modal__close-icon {
-    width: 24px;
-    height: 24px;
+  /* Re-enable pointer events for download links */
+  .project-card__download {
+    pointer-events: auto;
   }
 }
+
