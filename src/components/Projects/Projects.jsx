@@ -23,6 +23,7 @@ const Projects = () => {
   // Prevent body scroll when modal is open and scroll overlay to top
   useEffect(() => {
     if (selectedProject) {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
       document.body.style.overflow = "hidden";
       // Scroll overlay to top when modal opens
       if (overlayRef.current) {
