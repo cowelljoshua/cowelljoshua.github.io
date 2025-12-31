@@ -478,21 +478,29 @@
   }
 
   .modal-overlay {
-    padding: var(--space-md);
+    padding: 0;
     align-items: flex-start;
+    overflow-y: auto;
   }
 
   .modal {
-    max-height: 95vh;
-    margin-top: var(--space-md);
-    margin-bottom: var(--space-md);
+    max-height: none;
+    height: auto;
+    min-height: 100vh;
+    margin: 0;
+    border-radius: 0;
   }
 
   .modal__visual {
-    height: 200px;
+    height: 220px;
   }
 
   .modal__content {
-    padding: var(--space-xl);
+    padding: var(--space-lg);
+  }
+
+  .modal__close {
+    top: var(--space-md);
+    right: var(--space-md);
   }
 }

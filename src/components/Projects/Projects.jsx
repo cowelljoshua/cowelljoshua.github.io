@@ -18,10 +18,12 @@ const Projects = () => {
     return () => window.removeEventListener("keydown", handleEscape);
   }, []);
 
-  // Prevent body scroll when modal is open
+  // Prevent body scroll when modal is open and scroll to top on mobile
   useEffect(() => {
     if (selectedProject) {
       document.body.style.overflow = "hidden";
+      // Scroll to top of page when modal opens on mobile
+      window.scrollTo(0, 0);
     } else {
       document.body.style.overflow = "";
     }
