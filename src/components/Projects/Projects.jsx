@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import Section from "../Section";
 import "./Projects.css";
 
@@ -369,29 +370,30 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* Modal */}
-      <div
-        ref={overlayRef}
-        className={`modal-overlay ${
-          selectedProject ? "modal-overlay--open" : ""
-        }`}
-        onClick={() => setSelectedProject(null)}
-      >
-        {selectedProject && (
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <button
-              className="modal__close"
-              onClick={() => setSelectedProject(null)}
-              aria-label="Close modal"
-            >
-              <svg
-                className="modal__close-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
+      {/* Modal - rendered via portal to document.body */}
+      {createPortal(
+        <div
+          ref={overlayRef}
+          className={`modal-overlay ${
+            selectedProject ? "modal-overlay--open" : ""
+          }`}
+          onClick={() => setSelectedProject(null)}
+        >
+          {selectedProject && (
+            <div className="modal" onClick={(e) => e.stopPropagation()}>
+              <button
+                className="modal__close"
+                onClick={() => setSelectedProject(null)}
+                aria-label="Close modal"
               >
-                <path d="M18 6L6 18M6 6l12 12" />
+                <svg
+                  className="modal__close-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M18 6L6 18M6 6l12 12" />
               </svg>
             </button>
 
@@ -509,7 +511,9 @@ const Projects = () => {
             </div>
           </div>
         )}
-      </div>
+      </div>,
+        document.body
+      )}
     </Section>
   );
 };
