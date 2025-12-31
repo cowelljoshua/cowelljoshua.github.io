@@ -71,15 +71,44 @@
   background: #111;
 }
 
+/* Play button overlay */
+.bento__cell--hero::after {
+  content: '▶';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 2;
+  pointer-events: none;
+  padding-left: 8px;
+}
+
+.bento__cell--hero:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
 .bento__hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, filter 0.3s ease;
 }
 
 .bento__cell--hero:hover .bento__hero-image {
   transform: scale(1.05);
+  filter: brightness(0.7);
 }
 
 .bento__hero-overlay {
@@ -87,16 +116,25 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: var(--space-xl);
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  padding: var(--space-lg);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.bento__cell--hero:hover .bento__hero-overlay {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .bento__hero-label {
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-highlight);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  color: var(--color-white);
 }
 
 /* Bio Cell */
@@ -170,6 +208,7 @@
   transition: all 0.2s ease;
   cursor: pointer;
   grid-column: span 2;
+  position: relative;
 }
 
 /* First row: 4 items */
@@ -192,6 +231,45 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+/* Custom Tooltip */
+.bento__skill::before {
+  content: attr(data-skill-name);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  font-size: var(--font-size-xs);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease, transform 0.1s ease;
+  z-index: 10;
+}
+
+.bento__skill::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-2px);
+  border: 4px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease, transform 0.1s ease;
+  z-index: 10;
+}
+
+.bento__skill:hover::before,
+.bento__skill:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 /* Highlights Cell */
@@ -239,35 +317,35 @@
 }
 
 .bento__personal-title {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-semibold);
   color: var(--color-dark-gray);
   margin-bottom: var(--space-md);
 }
 
 .bento__personal-text {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-lg);
   color: var(--color-dark-gray);
   line-height: var(--line-height-relaxed);
   margin-bottom: var(--space-lg);
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .bento__hobbies {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-sm);
+  gap: var(--space-md);
 }
 
 .bento__hobby-tag {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-xs);
-  padding: var(--space-xs) var(--space-md);
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
   background: var(--color-white);
   border: 1px solid var(--color-light-gray);
   border-radius: var(--radius-full);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
   color: var(--color-dark-gray);
   transition: all 0.2s ease;
 }

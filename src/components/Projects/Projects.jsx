@@ -37,13 +37,12 @@ const Projects = () => {
       description:
         "Developed a Python-based predictive wear model improving component-life accuracy by over 75%.",
       fullDescription:
-        "Engineered a sophisticated Python-based predictive wear model for critical reactor components that addresses limitations in legacy analytical methods. Using advanced numerical techniques and statistical validation against historical performance data, the model achieves over 75% improvement in accuracy compared to previous approaches. The work involved developing multi-parameter algorithms that account for complex thermo-mechanical interactions, material fatigue mechanisms, and operational stress cycles. Automated the analysis pipeline to process continuous operational data, transforming a manual workflow that required hundreds of hours of computation into a streamlined process completing in minutes. The resulting tool enables nuclear operators to make data-driven decisions regarding maintenance schedules, component replacement strategies, and safe operating envelope optimization, directly supporting safer and more efficient reactor operations.",
+        "Engineered a sophisticated Python-based predictive wear model for critical reactor components that addresses limitations in legacy analytical methods. Using advanced numerical techniques and statistical validation against historical performance data, the model achieves over 75% improvement in accuracy compared to previous approaches. The work involved developing multi-parameter algorithms that account for complex thermo-mechanical interactions, material fatigue mechanisms, and operational stress cycles. The resulting tool enables nuclear operators to make data-driven decisions regarding maintenance schedules, component replacement strategies, and safe operating conditions optimization, directly supporting safer and more efficient reactor operations.",
       gradient: "robotics",
       tags: ["Python", "Predictive Modeling", "Nuclear Engineering", "Data Analysis"],
       details: [
         "Improved component-life accuracy by over 75% through advanced algorithm development",
         "Transformed 800+ hour manual process into automated pipeline completing in minutes",
-        "Integrated continuous operational data processing for real-time insights",
         "Enabled predictive maintenance strategies and safe operating condition optimization",
       ],
       icon: "layers",
@@ -53,7 +52,7 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Nuclear Reactor Operating Limit Algorithm",
+      title: "Reactor Operating Limit Algorithm",
       description:
         "Engineered a Python algorithm to calculate safe reactor operating conditions, reducing computation time from 800+ hours to minutes.",
       fullDescription:
@@ -88,8 +87,9 @@ const Projects = () => {
       ],
       icon: "flow",
       coverImage: "/cover_for_heat_exchanger.png",
-      coverZoom: 1.2,
-      coverScaleY: 1.5,
+      coverZoom: 1,
+      coverScaleY: 1,
+      videoUrl: "https://www.youtube.com/watch?v=cn7WdPEonhY&t=405s",
     },
     {
       id: 4,
@@ -97,18 +97,17 @@ const Projects = () => {
       description:
         "Engineered a modular UAV with 3D-printed components for rapid customization and precision payload delivery.",
       fullDescription:
-        "Led the complete design and fabrication of a custom unmanned aerial vehicle platform, leveraging 3D-printing technology to enable rapid prototyping, field customization, and streamlined component replacement. The modular architecture allows quick reconfiguration of the airframe for different mission profiles without requiring extensive rework or external manufacturing delays. Conducted comprehensive ANSYS CFD analysis of the airframe design, optimizing body contours and control surface geometry to minimize drag while maintaining structural stability across the operational envelope. Validated aerodynamic performance through detailed flow simulations and pressure coefficient analysis to ensure predictable handling characteristics. Engineered an automated payload deployment system with precision actuators and control logic capable of releasing payloads with high positional accuracy to strike 5-foot target zones. The deployment system incorporates fail-safes and testing protocols to ensure reliable operation across multiple repeated cycles. Integration testing verified compatibility between airframe, propulsion, avionics, and payload systems, ensuring seamless operation during field missions.",
+        "Led the complete design and fabrication of a custom unmanned aerial vehicle platform, leveraging 3D-printing technology to enable rapid prototyping, field customization, and streamlined component replacement. The modular architecture allows quick reconfiguration of the airframe for different mission profiles without requiring extensive rework or external manufacturing delays. Conducted comprehensive ANSYS CFD analysis of the airframe design, optimizing body contours and control surface geometry to minimize drag while maintaining structural stability across the operational envelope. Validated aerodynamic performance through detailed flow simulations and pressure coefficient analysis to ensure predictable handling characteristics. Integration testing verified compatibility between airframe, propulsion, avionics, and payload systems, ensuring seamless operation during field missions.",
       gradient: "aerospace",
       tags: ["CAD", "3D Printing", "ANSYS CFD", "Control Systems", "Payload Systems"],
       details: [
         "Designed modular airframe with 3D-printed components for rapid field customization and repairs",
         "Optimized aerodynamics through ANSYS CFD analysis across operational envelope",
-        "Engineered automated payload deployment system with precision accuracy",
         "Integrated and tested complete system across airframe, propulsion, and payload subsystems",
       ],
       icon: "rocket",
       coverImage: "/UAV_v1.JPG",
-      coverZoom: 1.3,
+      coverZoom: 1,
       coverScaleY: 1,
     },
     {
@@ -130,6 +129,26 @@ const Projects = () => {
       coverImage: "/rocketry_project_pic.png",
       coverZoom: 1,
       coverScaleY: 1,
+    },
+    {
+      id: 6,
+      title: "High Strain Rate Response of Human Bone",
+      description:
+        "Research investigating dynamic loading behavior of human proximal phalanx using Split Hopkinson Pressure Bar technology for conference presentation.",
+      fullDescription:
+        "This study investigates the high strain rate behavior of the human proximal phalanx using a Kolsky/Split Hopkinson Pressure Bar (SHPB) to capture its dynamic response under relevant loading. The experiments will subject bone specimens to axial compression and tension to evaluate how strain rate influences strength, stiffness, and failure mechanisms. These loading modes simulate real-world impact scenarios such as jumping, running, or sudden foot strikes, where the bone experiences rapid load application. Imaging and microscopy will later assess microstructural damage and fracture morphology. This research aims to improve understanding of the dynamics behavior of bones and to inform the development of computational models, orthopedic materials, and protective footwear designs that mitigate impact-related injuries.",
+      gradient: "flow",
+      tags: ["Materials Testing", "SEM", "Experimental Design", "Biomechanics"],
+      details: [
+        "Conducting Split Hopkinson Pressure Bar experiments on human bone specimens",
+        "Evaluating strain rate effects on bone strength, stiffness, and failure mechanisms",
+        "Utilizing imaging and microscopy to analyze microstructural damage patterns",
+        "Presenting research findings at conference in Summer 2026",
+      ],
+      icon: "flow",
+      coverImage: "/shpb_project.jpg",
+      coverZoom: 1,
+      coverScaleY: 0.8,
     },
   ];
 
@@ -257,8 +276,8 @@ const Projects = () => {
                   style={{ 
                     width: "100%", 
                     height: "100%", 
-                    objectFit: "contain",
-                    transform: `scale(${project.coverZoom || 1}, ${project.coverScaleY || 1})`
+                    objectFit: "cover",
+                    transform: `scale(${project.coverZoom || 1})`
                   }}
                 />
               ) : (
@@ -396,6 +415,28 @@ const Projects = () => {
 
             <div className="modal__content">
               <h2 className="modal__title">{selectedProject.title}</h2>
+              
+              {selectedProject.videoUrl && (
+                <a
+                  href={selectedProject.videoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="modal__video-link"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    style={{ marginRight: '8px' }}
+                  >
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                  Watch Project Video
+                </a>
+              )}
+              
               <p className="modal__description">
                 {selectedProject.fullDescription}
               </p>

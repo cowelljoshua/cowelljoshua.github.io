@@ -244,7 +244,9 @@
   position: relative;
   width: 100%;
   max-width: 800px;
-  max-height: 90vh;
+  max-height: 75vh;
+  margin-top: 50px;
+  margin-bottom: 50px;
   background: var(--color-white);
   border-radius: var(--radius-xl);
   overflow-y: auto; /* Allow the entire modal to scroll */
@@ -340,6 +342,7 @@
 /* Modal content */
 .modal__content {
   padding: var(--space-2xl);
+  padding-bottom: var(--space-3xl);
   /* Removed max-height and overflow - let modal handle scrolling */
 }
 
@@ -348,6 +351,26 @@
   font-weight: var(--font-weight-semibold);
   color: var(--color-primary);
   margin-bottom: var(--space-lg);
+}
+
+.modal__video-link {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-sm) var(--space-lg);
+  margin-bottom: var(--space-lg);
+  background: var(--color-highlight);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  transition: all 0.3s ease;
+}
+
+.modal__video-link:hover {
+  background: var(--color-highlight-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 144, 217, 0.3);
 }
 
 .modal__description {
@@ -454,8 +477,19 @@
     gap: var(--space-lg);
   }
 
+  .modal-overlay {
+    padding: var(--space-md);
+    align-items: flex-start;
+  }
+
   .modal {
     max-height: 95vh;
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-md);
+  }
+
+  .modal__visual {
+    height: 200px;
   }
 
   .modal__content {

@@ -12,10 +12,12 @@
 .experience::before {
   content: "";
   position: absolute;
-  left: 30px;
+  left: 50%;
+  transform: translateX(-750px);
   top: 0;
   bottom: 0;
   width: 18%;
+  max-width: 250px;
   background-image: url("/rocket1.png");
   background-size: contain;
   background-position: left center;
@@ -28,10 +30,12 @@
 .experience::after {
   content: "";
   position: absolute;
-  right: 30px;
+  right: 50%;
+  transform: translateX(750px);
   top: 0;
   bottom: 0;
   width: 18%;
+  max-width: 250px;
   background-image: url("/rocket2.png");
   background-size: contain;
   background-position: right center;
@@ -75,7 +79,7 @@
 /* Timeline container */
 .experience__timeline {
   position: relative;
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   z-index: 2;
 }

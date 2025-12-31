@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./Contact.css";
 
 /**
@@ -5,6 +6,15 @@ import "./Contact.css";
  * Clean, minimal centered layout
  */
 const Contact = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleEmailClick = (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText("joshuacowell2005@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <section id="contact" className="contact-simple">
       <div className="contact__container">
@@ -14,9 +24,16 @@ const Contact = () => {
             Have a question or want to work together? I'd love to hear from you.
           </p>
 
-          <a href="mailto:joshuacowell2005@gmail.com" className="contact__email">
-            joshuacowell2005@gmail.com
-          </a>
+          <div className="contact__email-wrapper">
+            <a 
+              href="mailto:joshuacowell2005@gmail.com" 
+              className="contact__email"
+              onClick={handleEmailClick}
+            >
+              joshuacowell2005@gmail.com
+            </a>
+            {copied && <span className="contact__copied-tooltip">Copied!</span>}
+          </div>
 
           <div className="contact__divider"></div>
 
@@ -34,7 +51,7 @@ const Contact = () => {
 
           <div className="contact__availability">
             <span className="contact__availability-dot"></span>
-            <span>Available for Internships & Co-ops</span>
+            <span>Available for Internships & Post-Grad Jobs</span>
           </div>
         </div>
       </div>
