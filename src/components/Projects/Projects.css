@@ -472,10 +472,11 @@
   }
 
   .modal-overlay {
-    padding: 0;
+    padding: env(safe-area-inset-top, 0) 0 0;
     align-items: flex-start;
     justify-content: center;
     overflow-y: auto;
+    min-height: 100vh;
   }
 
   .modal {
@@ -487,6 +488,7 @@
     margin: 0;
     border-radius: 0;
     transform: none;
+    box-shadow: none;
   }
 
   .modal-overlay--open .modal {
