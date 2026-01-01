@@ -93,7 +93,6 @@ const Projects = () => {
       tags: ["Python", "Automation", "Data Analysis", "Engineering Documentation"],
       details: [
         "Automated workflow reducing 800+ hours of manual calculations to minutes",
-        "Implemented data versioning for traceability and regulatory compliance",
         "Generated professional technical reports with embedded analysis and visualizations",
         "Enabled analysis of millions of data points with consistent methodology",
       ],
