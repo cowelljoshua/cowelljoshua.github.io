@@ -167,7 +167,7 @@ const Projects = () => {
       id: 6,
       title: "High Strain Rate Response of Human Bone",
       description:
-        "Research investigating dynamic loading behavior of human proximal phalanx using Split Hopkinson Pressure Bar technology for conference presentation.",
+        "Research dynamic loading behavior of human proximal phalanx using Split Hopkinson Pressure Bar technology for conference presentation.",
       fullDescription:
         "My study investigates the high strain rate behavior of the human proximal phalanx (foot bone) using a Kolsky/Split Hopkinson Pressure Bar (SHPB) to capture its dynamic response under relevant loading. The experiments subject bone specimens to axial compression and tension to evaluate how strain rate influences strength, stiffness, and failure mechanisms. These loading modes simulate real-world impact scenarios such as jumping, running, or sudden foot strikes, where the bone experiences rapid load application. Imaging and microscopy will later assess microstructural damage and fracture morphology. This research aims to improve understanding of the dynamics behavior of bones and to inform the development of computational models, orthopedic materials, and protective footwear designs that mitigate impact-related injuries.",
       gradient: "flow",
