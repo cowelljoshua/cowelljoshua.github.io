@@ -12,10 +12,10 @@ const Experience = () => {
       role: "Thermal Hydraulics Engineering Intern",
       date: "May 2025 — Dec 2025",
       description: [
-        "Developed a predictive wear mathematical model in Python for critical reactor components, proving to be over 75% more accurate compared to the previous model",
-        "Programmed a Python algorithm using a 6-dimensional Xarray to calculate safe reactor operating conditions, reducing computation time from >800 hours to minutes compared to prior methods",
-        "Performed system-level flow and vibration analysis using AFT Fathom and custom FIV modeling software",
-        "Awarded $2,500 for final summer presentation and hired on part-time during the school year",
+        "Developed a predictive wear model in Python for safety-critical reactor components, achieving 75% improvement in accuracy over legacy methods",
+        "Engineered a Python algorithm processing 6-dimensional datasets to calculate safe operating limits, reducing analysis time from 800+ hours to minutes",
+        "Performed system-level thermal-hydraulic and flow-induced vibration (FIV) analysis to support component qualification",
+        "Authored technical documentation and presented findings to engineering leadership; awarded $2,500 for presentation excellence",
       ],
       technologies: [
         "Python",
@@ -30,11 +30,11 @@ const Experience = () => {
       role: "Chief Systems Engineer",
       date: "June 2025 — Present",
       description: [
-        "Led as member captain in the design, testing, and analysis of a high-powered rocket",
-        "Oversaw all engineering decisions across propulsion, avionics, recovery, and aerodynamics subsystems",
-        "Managed more than $16,000 in project budgeting and resource allocation across competition campaigns",
-        "Facilitated communication between internal teams, external vendors, and university faculty to optimize project efficiency",
-        "Displayed advanced proficiency in engineering software (e.g., SolidWorks, ANSYS, MATLAB) to verify the accuracy and feasibility of all subsystem models and simulations",
+        "Lead a cross-functional team of 60+ members in the design, integration, and verification of high-powered rocket systems",
+        "Direct systems engineering decisions across propulsion, avionics, recovery, and aerodynamics subsystems",
+        "Manage requirements definition, interface control, and configuration management throughout the development lifecycle",
+        "Oversee a $16,000+ project budget, vendor coordination, and schedule milestones for competition campaigns",
+        "Perform verification and validation (V&V) using SolidWorks, ANSYS, and MATLAB for subsystem models",
       ],
       technologies: ["SolidWorks", "ANSYS", "MATLAB", "Systems Engineering"],
     },
@@ -43,8 +43,8 @@ const Experience = () => {
       role: "Lead Undergraduate Research Assistant",
       date: "Sep 2024 — Present",
       description: [
-        "Led a team of 5 undergraduate students to perform split-Hopkinson pressure bar (SHPB) test, including sample preparation, high-speed imaging, electron microscopy",
-        "Assisted in the design and manufacturing of custom SHPB systems to fit material testing needs",
+        "Lead a team of 5 researchers conducting split-Hopkinson pressure bar (SHPB) testing for dynamic material characterization",
+        "Design test procedures and fixtures for high-strain-rate experiments; analyze results using electron microscopy and high-speed imaging",
       ],
       technologies: ["Materials Testing", "SEM", "Experimental Design"],
     },
@@ -54,8 +54,8 @@ const Experience = () => {
       role: "Senior Structural Engineer",
       date: "Sep 2023 — June 2025",
       description: [
-        "Utilized ANSYS Fluent & Mechanical, RocketPy, OpenRocket, and Onshape for simulations, FEA, and computational modeling, ensuring compliance with competition standards",
-        "Delivered reports to guarantee the rocket's compliance with competition standards and flight requirements",
+        "Conducted finite element analysis (FEA) and computational fluid dynamics (CFD) simulations to verify structural integrity and aerodynamic performance",
+        "Authored technical reports documenting analysis methodology, results, and compliance with competition requirements",
       ],
       technologies: [
         "ANSYS Fluent",

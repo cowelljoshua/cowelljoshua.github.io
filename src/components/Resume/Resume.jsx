@@ -74,23 +74,23 @@ const Resume = () => {
             <p className="resume__company">Framatome Nuclear</p>
             <ul className="resume__bullets">
               <li>
-                Developed a predictive wear mathematical model in Python for
-                critical reactor components, proving to be over 75% more
-                accurate compared to the previous model.
+                Developed a predictive wear model in Python for safety-critical
+                reactor components, achieving 75% improvement in accuracy over
+                legacy methods.
               </li>
               <li>
-                Programmed a Python algorithm using a 6-dimensional Xarray to
-                calculate safe reactor operating conditions, reducing
-                computation time from &gt;800 hours to minutes compared to prior
-                methods.
+                Engineered a Python algorithm processing 6-dimensional datasets to
+                calculate safe operating limits, reducing analysis time from
+                800+ hours to minutes.
               </li>
               <li>
-                Performed system-level flow and vibration analysis using AFT
-                Fathom and custom FIV modeling software.
+                Performed system-level thermal-hydraulic and flow-induced
+                vibration (FIV) analysis to support component qualification.
               </li>
               <li>
-                Awarded $2,500 for final summer presentation and hired on
-                part-time during the school year.
+                Authored technical documentation and presented findings to
+                engineering leadership; awarded $2,500 for presentation
+                excellence.
               </li>
             </ul>
           </div>
@@ -105,21 +105,24 @@ const Resume = () => {
             </p>
             <ul className="resume__bullets">
               <li>
-                Led as member captain in the design, testing, and analysis of a
-                high-powered rocket.
+                Lead a cross-functional team of 60+ members in the design,
+                integration, and verification of high-powered rocket systems.
               </li>
               <li>
-                Oversaw all engineering decisions across propulsion, avionics,
-                recovery, and aerodynamics subsystems.
+                Direct systems engineering decisions across propulsion,
+                avionics, recovery, and aerodynamics subsystems.
               </li>
               <li>
-                Facilitated communication between internal teams, external
-                vendors, and university faculty to optimize project efficiency.
+                Manage requirements definition, interface control, and
+                configuration management throughout the development lifecycle.
               </li>
               <li>
-                Displayed advanced proficiency in engineering software (e.g.,
-                SolidWorks, ANSYS, MATLAB) to verify the accuracy and
-                feasibility of all subsystem models and simulations.
+                Oversee a $16,000+ project budget, vendor coordination, and
+                schedule milestones for competition campaigns.
+              </li>
+              <li>
+                Perform verification and validation (V&amp;V) using SolidWorks,
+                ANSYS, and MATLAB for subsystem models.
               </li>
             </ul>
           </div>
@@ -131,16 +134,16 @@ const Resume = () => {
               </h3>
               <span className="resume__item-date">Sep 2024 - Present</span>
             </div>
-            <p className="resume__company">Liberty Rocketry</p>
+            <p className="resume__company">Liberty University</p>
             <ul className="resume__bullets">
               <li>
-                Led a team of 5 undergraduate students to perform
-                split-Hopkinson pressure bar (SHPB) test, including sample
-                preparation, high-speed imaging, electron microscopy.
+                Lead a team of 5 researchers conducting split-Hopkinson pressure
+                bar (SHPB) testing for dynamic material characterization.
               </li>
               <li>
-                Assisted in the design and manufacturing of custom SHPB systems
-                to fit material testing needs.
+                Design test procedures and fixtures for high-strain-rate
+                experiments; analyze results using electron microscopy and
+                high-speed imaging.
               </li>
             </ul>
           </div>
@@ -153,13 +156,13 @@ const Resume = () => {
             <p className="resume__company">Liberty Rocketry</p>
             <ul className="resume__bullets">
               <li>
-                Utilized ANSYS Fluent &amp; Mechanical, RocketPy, OpenRocket,
-                and Onshape for simulations, FEA, and computational modeling,
-                ensuring compliance with competition standards.
+                Conducted finite element analysis (FEA) and computational fluid
+                dynamics (CFD) simulations to verify structural integrity and
+                aerodynamic performance.
               </li>
               <li>
-                Delivered reports to guarantee the rocket's compliance with
-                competition standards and flight requirements.
+                Authored technical reports documenting analysis methodology,
+                results, and compliance with competition requirements.
               </li>
             </ul>
           </div>
