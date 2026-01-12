@@ -261,6 +261,17 @@ const Resume = () => {
 
           <div className="resume__project-item">
             <h3 className="resume__project-title">
+              3D Printed High-Power Rocket
+            </h3>
+            <ul className="resume__bullets">
+              <li>
+                Engineered a fully 3D printed rocket achieving Mach 0.5+ and 3,000 ft altitude; performed ANSYS CFD analysis for aerodynamic optimization
+              </li>
+            </ul>
+          </div>
+
+          <div className="resume__project-item">
+            <h3 className="resume__project-title">
               High Strain Rate Bone Research
             </h3>
             <ul className="resume__bullets">
