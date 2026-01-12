@@ -32,6 +32,7 @@ const Experience = () => {
       description: [
         "Led as member captain in the design, testing, and analysis of a high-powered rocket",
         "Oversaw all engineering decisions across propulsion, avionics, recovery, and aerodynamics subsystems",
+        "Managed more than $16,000 in project budgeting and resource allocation across competition campaigns",
         "Facilitated communication between internal teams, external vendors, and university faculty to optimize project efficiency",
         "Displayed advanced proficiency in engineering software (e.g., SolidWorks, ANSYS, MATLAB) to verify the accuracy and feasibility of all subsystem models and simulations",
       ],
