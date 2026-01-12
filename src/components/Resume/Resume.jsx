@@ -30,11 +30,11 @@ const Resume = () => {
         <div className="resume__header">
           <h1 className="resume__name">Joshua Cowell</h1>
           <div className="resume__contact">
-            <span>910-660-6996</span>
-            <span>•</span>
             <span>Lynchburg, VA</span>
-            <span>•</span>
+            <span>|</span>
             <span>joshuacowell2005@gmail.com</span>
+            <span>|</span>
+            <span>cowelljoshua.github.io</span>
           </div>
         </div>
 
@@ -55,7 +55,7 @@ const Resume = () => {
             </p>
             <p className="resume__gpa">GPA: 3.82</p>
             <p className="resume__coursework">
-              <strong>Relevant Coursework:</strong> Fluid Dynamics, Heat Transfer, Thermodynamics I and II, Differential Equations, Dynamics, Materials Engineering, University Physics II, Statics, Engineering Economy, Physics I and II, Calculus I, II, III
+              <strong>Relevant Coursework:</strong> Fluid Dynamics, Heat Transfer, Thermodynamics I &amp; II, Differential Equations, Dynamics, Materials Engineering, Statics, Calculus I-III
             </p>
           </div>
         </section>
@@ -101,7 +101,7 @@ const Resume = () => {
               <span className="resume__item-date">June 2025 - Present</span>
             </div>
             <p className="resume__company">
-              Liberty Rocketry (9th/156 international teams in 2024)
+              Liberty Rocketry (9th of 156 international teams, 2024)
             </p>
             <ul className="resume__bullets">
               <li>
@@ -189,15 +189,20 @@ const Resume = () => {
           <h2 className="resume__section-title">TECHNICAL SKILLS</h2>
           <ul className="resume__bullets">
             <li>
-              <strong>Software:</strong> AFT Fathom, ANSYS fluent, ANSYS
-              mechanical, SolidWorks, Onshape, OpenRocket, RocketPy
+              <strong>Analysis &amp; CAE:</strong> ANSYS Fluent, ANSYS
+              Mechanical, AFT Fathom, OpenRocket, RocketPy, FEA, CFD
             </li>
             <li>
-              <strong>Machines:</strong> Scanning Electron Microscope (SEM),
-              Metal X 3D Printer, CNC, WaterJet, Lathe
+              <strong>CAD &amp; Design:</strong> SolidWorks, Onshape, Technical
+              Drawing, 3D Printing, CNC Machining
             </li>
             <li>
-              <strong>Programming Languages:</strong> MATLAB, Python
+              <strong>Programming:</strong> Python (NumPy, Xarray, Pandas),
+              MATLAB, Data Analysis, Automation
+            </li>
+            <li>
+              <strong>Laboratory:</strong> Scanning Electron Microscope (SEM),
+              High Speed Imaging, Material Testing
             </li>
           </ul>
         </section>
@@ -208,26 +213,60 @@ const Resume = () => {
 
           <div className="resume__project-item">
             <h3 className="resume__project-title">
-              Unmanned Aerial Vehicle (UAV)
+              Predictive Wear Model – Nuclear Component Lifecycle Analysis
             </h3>
             <ul className="resume__bullets">
               <li>
-                Engineered a custom UAV with 3D-printed parts to support
-                customizability and quick repairs.
-              </li>
-              <li>
-                Conducted ANSYS CFD simulation to validate cornual surface
-                performance.
+                Developed a Python-based predictive model for safety-critical
+                components, improving failure prediction accuracy by 75%
               </li>
             </ul>
           </div>
 
           <div className="resume__project-item">
-            <h3 className="resume__project-title">Rocketry</h3>
+            <h3 className="resume__project-title">
+              Automated Operating Limit Analysis Tool
+            </h3>
             <ul className="resume__bullets">
               <li>
-                Built a two-stage rocket that reached over 2,500 feet and
-                utilized my custom recovery system.
+                Engineered a Python automation framework reducing 800+ hours of
+                manual engineering calculations to minutes
+              </li>
+            </ul>
+          </div>
+
+          <div className="resume__project-item">
+            <h3 className="resume__project-title">
+              Heat Exchanger Thermal-Hydraulic Optimization
+            </h3>
+            <ul className="resume__bullets">
+              <li>
+                Performed CFD analysis using ANSYS Fluent to optimize heat
+                exchanger thermal performance and flow characteristics
+              </li>
+            </ul>
+          </div>
+
+          <div className="resume__project-item">
+            <h3 className="resume__project-title">
+              Unmanned Aerial Vehicle (UAV) Design &amp; Analysis
+            </h3>
+            <ul className="resume__bullets">
+              <li>
+                Designed a modular UAV airframe with rapid prototyping
+                capability; validated aerodynamics through CFD simulation
+              </li>
+            </ul>
+          </div>
+
+          <div className="resume__project-item">
+            <h3 className="resume__project-title">
+              High Strain Rate Bone Research
+            </h3>
+            <ul className="resume__bullets">
+              <li>
+                Investigating the dynamic loading behavior of human bone using
+                Split Hopkinson Pressure Bar for conference presentation
               </li>
             </ul>
           </div>
