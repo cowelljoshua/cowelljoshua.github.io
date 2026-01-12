@@ -1,110 +1,188 @@
 \documentclass[10pt,letterpaper]{article}
 
-% Packages
-\usepackage[margin=0.4in, top=0.35in, bottom=0.35in]{geometry}
+% ============================================
+% PACKAGES
+% ============================================
+\usepackage[margin=0.5in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
 \usepackage{enumitem}
 \usepackage{titlesec}
-\usepackage{hyperref}
-\usepackage{fontenc}
 \usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{setspace}
 
-% Remove page numbers
-\pagenumbering{gobble}
+% ============================================
+% COLORS - Professional Navy for Defense
+% ============================================
+\definecolor{navyblue}{RGB}{0, 40, 85}
+\definecolor{darkgray}{RGB}{50, 50, 50}
+\definecolor{medgray}{RGB}{100, 100, 100}
 
-% Section formatting
-\titleformat{\section}{\normalsize\bfseries\uppercase}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{6pt}{4pt}
-
-% Reduce spacing
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
-
-% Custom commands
-\newcommand{\resumeItem}[1]{\item #1}
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}
-  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{#3} & \\
-  \end{tabular*}\vspace{-5pt}
+% ============================================
+% HYPERLINK SETUP
+% ============================================
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0}
 }
 
+% ============================================
+% REMOVE PAGE NUMBERS
+% ============================================
+\pagenumbering{gobble}
+
+% ============================================
+% SECTION FORMATTING
+% ============================================
+\titleformat{\section}{\normalsize\bfseries}{}{0em}{\textcolor{navyblue}}[\textcolor{navyblue}{\titlerule}]
+\titlespacing{\section}{0pt}{8pt}{4pt}
+
+% Uppercase section titles manually
+\renewcommand{\section}[1]{
+    \vspace{8pt}
+    {\normalsize\bfseries\textcolor{navyblue}{\MakeUppercase{#1}}}
+    \vspace{1pt}
+    
+    {\color{navyblue}\hrule height 0.5pt}
+    \vspace{4pt}
+}
+
+% ============================================
+% SPACING
+% ============================================
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt, label=\textcolor{navyblue}{\textbullet}}
+
+% ============================================
+% CUSTOM COMMANDS
+% ============================================
+\newcommand{\resumeEntry}[4]{
+    \textbf{#1} \hfill \textcolor{medgray}{#2} \\
+    \textit{\textcolor{darkgray}{#3}} \ifx&#4&\else\hfill \textcolor{medgray}{#4}\fi
+    \vspace{1pt}
+}
+
+\newcommand{\projectEntry}[1]{
+    \textbf{#1}
+    \vspace{1pt}
+}
+
+% ============================================
+% DOCUMENT
+% ============================================
 \begin{document}
 
-% Header
+% ============================================
+% HEADER
+% ============================================
 \begin{center}
-  {\LARGE \textbf{Joshua Cowell}} \\[4pt]
-  910-660-6996 \quad $\bullet$ \quad Lynchburg, VA \quad $\bullet$ \quad joshuacowell2005@gmail.com
+    {\fontsize{22}{26}\selectfont\bfseries\textcolor{navyblue}{JOSHUA COWELL}}
+    
+    \vspace{4pt}
+    
+    {\color{darkgray}
+    \faPhone\ \ 910-660-6996 \quad
+    \faMapMarker*\ \ Lynchburg, VA \quad
+    \faEnvelope\ \ joshuacowell2005@gmail.com
+    }
 \end{center}
 
-% Education
-\section{Education}
-\textbf{Bachelor of Science in Mechanical Engineering} \hfill Expected Graduation: May 2027 \\
-\textit{Liberty University, Lynchburg, VA} \\
-GPA: 3.82 \\
-\textbf{Relevant Coursework:} Fluid Dynamics, Heat Transfer, Thermodynamics I and II, Differential Equations, Dynamics, Materials Engineering, University Physics II, Statics, Engineering Economy, Physics I and II, Calculus I, II, III
+\vspace{2pt}
 
-% Professional Experience
+% ============================================
+% EDUCATION
+% ============================================
+\section{Education}
+
+\resumeEntry{Bachelor of Science in Mechanical Engineering}{Expected May 2027}{Liberty University, Lynchburg, VA}{}
+
+\vspace{-3pt}
+\hspace{0.15in}\textbf{GPA:} 3.82 \quad | \quad \textbf{Relevant Coursework:} Fluid Dynamics, Heat Transfer, Thermodynamics I \& II, Differential Equations, Dynamics, Materials Engineering, Statics, Calculus I--III
+
+\vspace{3pt}
+
+% ============================================
+% PROFESSIONAL EXPERIENCE
+% ============================================
 \section{Professional Experience}
 
-\textbf{Thermal Hydraulics Engineering Intern} \hfill May 2025 -- Dec 2025 \\
-\textit{Framatome Nuclear}
-\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt]
-  \item Developed a predictive wear mathematical model in Python for critical reactor components, proving to be over 75\% more accurate compared to the previous model.
-  \item Programmed a Python algorithm using a 6-dimensional Xarray to calculate safe reactor operating conditions, reducing computation time from >800 hours to minutes compared to prior methods.
-  \item Performed system-level flow and vibration analysis using AFT Fathom and custom FIV modeling software.
-  \item Awarded \$2,500 for final summer presentation and hired on part-time during the school year.
+\resumeEntry{Thermal Hydraulics Engineering Intern}{May 2025 -- Dec 2025}{Framatome Nuclear}{}
+\begin{itemize}
+    \item Developed a predictive wear mathematical model in Python for critical reactor components, achieving \textbf{75\% greater accuracy} compared to the previous model
+    \item Programmed a Python algorithm using 6-dimensional Xarray to calculate safe reactor operating conditions, reducing computation time from \textbf{800+ hours to minutes}
+    \item Performed system-level flow and vibration analysis using AFT Fathom and custom FIV modeling software
+    \item Awarded \textbf{\$2,500} for final summer presentation; hired part-time during academic year
 \end{itemize}
 
-\textbf{Chief Systems Engineer} \hfill June 2025 -- Present \\
-\textit{Liberty Rocketry (9th/156 international teams in 2024)}
-\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt]
-  \item Led as member captain in the design, testing, and analysis of a high-powered rocket.
-  \item Oversaw all engineering decisions across propulsion, avionics, recovery, and aerodynamics subsystems.
-  \item Facilitated communication between internal teams, external vendors, and university faculty to optimize project efficiency.
-  \item Displayed advanced proficiency in engineering software (e.g., SolidWorks, ANSYS, MATLAB) to verify the accuracy and feasibility of all subsystem models and simulations.
+\vspace{2pt}
+
+\resumeEntry{Chief Systems Engineer}{June 2025 -- Present}{Liberty Rocketry \textnormal{\textcolor{medgray}{(9th of 156 international teams, 2024)}}}{}
+\begin{itemize}
+    \item Lead member captain overseeing design, testing, and analysis of high-powered rocket systems
+    \item Direct all engineering decisions across propulsion, avionics, recovery, and aerodynamics subsystems
+    \item Coordinate communication between internal teams, external vendors, and university faculty
+    \item Utilize SolidWorks, ANSYS, and MATLAB to verify accuracy of subsystem models and simulations
 \end{itemize}
 
-\textbf{Lead Undergraduate Research Assistant} \hfill Sep 2024 -- Present \\
-\textit{Liberty University}
-\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt]
-  \item Led a team of 5 undergraduate students to perform split-Hopkinson pressure bar (SHPB) test, including sample preparation, high-speed imaging, electron microscopy.
-  \item Assisted in the design and manufacturing of custom SHPB systems to fit material testing needs.
+\vspace{2pt}
+
+\resumeEntry{Lead Undergraduate Research Assistant}{Sep 2024 -- Present}{Liberty University}{}
+\begin{itemize}
+    \item Lead team of 5 undergraduate students performing split-Hopkinson pressure bar (SHPB) testing including sample preparation, high-speed imaging, and electron microscopy
+    \item Design and manufacture custom SHPB systems tailored to specific material testing requirements
 \end{itemize}
 
-\textbf{Senior Structural Engineer} \hfill Sep 2023 -- June 2025 \\
-\textit{Liberty Rocketry}
-\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt]
-  \item Utilized ANSYS Fluent \& Mechanical, RocketPy, OpenRocket, and Onshape for simulations, FEA, and computational modeling, ensuring compliance with competition standards.
-  \item Delivered reports to guarantee the rocket's compliance with competition standards and flight requirements.
+\vspace{2pt}
+
+\resumeEntry{Senior Structural Engineer}{Sep 2023 -- June 2025}{Liberty Rocketry}{}
+\begin{itemize}
+    \item Conducted simulations, FEA, and computational modeling using ANSYS Fluent, ANSYS Mechanical, RocketPy, OpenRocket, and Onshape
+    \item Delivered technical reports ensuring rocket compliance with competition standards and flight requirements
 \end{itemize}
 
-\textbf{Camp Counselor} \hfill May 2024 -- Aug 2024 \\
-\textit{Woodlands Camp, GA}
-\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt]
-  \item Provided 24-hour care during weeklong outdoor camping trips with 12 children per week (ages 8 to 18), teaching survival skills, rock climbing, whitewater rafting, horseback riding, and cave camping.
+\vspace{2pt}
+
+\resumeEntry{Camp Counselor}{May 2024 -- Aug 2024}{Woodlands Camp, GA}{}
+\begin{itemize}
+    \item Provided 24-hour supervision during weeklong outdoor expeditions with 12 youth (ages 8--18), instructing survival skills, rock climbing, whitewater rafting, and cave camping
 \end{itemize}
 
-% Technical Skills
+\vspace{2pt}
+
+% ============================================
+% TECHNICAL SKILLS
+% ============================================
 \section{Technical Skills}
-\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt]
-  \item \textbf{Software:} AFT Fathom, ANSYS Fluent, ANSYS Mechanical, SolidWorks, Onshape, OpenRocket, RocketPy
-  \item \textbf{Machines:} Scanning Electron Microscope (SEM), Metal X 3D Printer, CNC, WaterJet, Lathe
-  \item \textbf{Programming Languages:} MATLAB, Python
-\end{itemize}
 
-% Projects
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}l X@{}}
+Software: & AFT Fathom, ANSYS Fluent, ANSYS Mechanical, SolidWorks, Onshape, OpenRocket, RocketPy \\[3pt]
+Equipment: & Scanning Electron Microscope (SEM), Metal X 3D Printer, CNC, WaterJet, Lathe \\[3pt]
+Programming: & Python, MATLAB \\
+\end{tabularx}
+
+\vspace{2pt}
+
+% ============================================
+% PROJECTS
+% ============================================
 \section{Projects}
 
-\textbf{Unmanned Aerial Vehicle (UAV)}
-\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt]
-  \item Engineered a custom UAV with 3D-printed parts to support customizability and quick repairs.
-  \item Conducted ANSYS CFD simulation to validate cornual surface performance.
+\projectEntry{Unmanned Aerial Vehicle (UAV)}
+\begin{itemize}
+    \item Engineered custom UAV with 3D-printed components for rapid prototyping and field repairs
+    \item Conducted ANSYS CFD simulations to validate aerodynamic surface performance
 \end{itemize}
 
-\textbf{Rocketry}
-\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt]
-  \item Built a two-stage rocket that reached over 2,500 feet and utilized my custom recovery system.
+\vspace{2pt}
+
+\projectEntry{High-Power Rocketry}
+\begin{itemize}
+    \item Built two-stage rocket achieving 2,500+ ft altitude with custom-designed recovery system
 \end{itemize}
 
 \end{document}
