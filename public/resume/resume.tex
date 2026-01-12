@@ -1,0 +1,110 @@
+\documentclass[10pt,letterpaper]{article}
+
+% Packages
+\usepackage[margin=0.4in, top=0.35in, bottom=0.35in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{fontenc}
+\usepackage{xcolor}
+
+% Remove page numbers
+\pagenumbering{gobble}
+
+% Section formatting
+\titleformat{\section}{\normalsize\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6pt}{4pt}
+
+% Reduce spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item #1}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\begin{document}
+
+% Header
+\begin{center}
+  {\LARGE \textbf{Joshua Cowell}} \\[4pt]
+  910-660-6996 \quad $\bullet$ \quad Lynchburg, VA \quad $\bullet$ \quad joshuacowell2005@gmail.com
+\end{center}
+
+% Education
+\section{Education}
+\textbf{Bachelor of Science in Mechanical Engineering} \hfill Expected Graduation: May 2027 \\
+\textit{Liberty University, Lynchburg, VA} \\
+GPA: 3.82 \\
+\textbf{Relevant Coursework:} Fluid Dynamics, Heat Transfer, Thermodynamics I and II, Differential Equations, Dynamics, Materials Engineering, University Physics II, Statics, Engineering Economy, Physics I and II, Calculus I, II, III
+
+% Professional Experience
+\section{Professional Experience}
+
+\textbf{Thermal Hydraulics Engineering Intern} \hfill May 2025 -- Dec 2025 \\
+\textit{Framatome Nuclear}
+\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt]
+  \item Developed a predictive wear mathematical model in Python for critical reactor components, proving to be over 75\% more accurate compared to the previous model.
+  \item Programmed a Python algorithm using a 6-dimensional Xarray to calculate safe reactor operating conditions, reducing computation time from >800 hours to minutes compared to prior methods.
+  \item Performed system-level flow and vibration analysis using AFT Fathom and custom FIV modeling software.
+  \item Awarded \$2,500 for final summer presentation and hired on part-time during the school year.
+\end{itemize}
+
+\textbf{Chief Systems Engineer} \hfill June 2025 -- Present \\
+\textit{Liberty Rocketry (9th/156 international teams in 2024)}
+\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt]
+  \item Led as member captain in the design, testing, and analysis of a high-powered rocket.
+  \item Oversaw all engineering decisions across propulsion, avionics, recovery, and aerodynamics subsystems.
+  \item Facilitated communication between internal teams, external vendors, and university faculty to optimize project efficiency.
+  \item Displayed advanced proficiency in engineering software (e.g., SolidWorks, ANSYS, MATLAB) to verify the accuracy and feasibility of all subsystem models and simulations.
+\end{itemize}
+
+\textbf{Lead Undergraduate Research Assistant} \hfill Sep 2024 -- Present \\
+\textit{Liberty University}
+\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt]
+  \item Led a team of 5 undergraduate students to perform split-Hopkinson pressure bar (SHPB) test, including sample preparation, high-speed imaging, electron microscopy.
+  \item Assisted in the design and manufacturing of custom SHPB systems to fit material testing needs.
+\end{itemize}
+
+\textbf{Senior Structural Engineer} \hfill Sep 2023 -- June 2025 \\
+\textit{Liberty Rocketry}
+\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt]
+  \item Utilized ANSYS Fluent \& Mechanical, RocketPy, OpenRocket, and Onshape for simulations, FEA, and computational modeling, ensuring compliance with competition standards.
+  \item Delivered reports to guarantee the rocket's compliance with competition standards and flight requirements.
+\end{itemize}
+
+\textbf{Camp Counselor} \hfill May 2024 -- Aug 2024 \\
+\textit{Woodlands Camp, GA}
+\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt]
+  \item Provided 24-hour care during weeklong outdoor camping trips with 12 children per week (ages 8 to 18), teaching survival skills, rock climbing, whitewater rafting, horseback riding, and cave camping.
+\end{itemize}
+
+% Technical Skills
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt]
+  \item \textbf{Software:} AFT Fathom, ANSYS Fluent, ANSYS Mechanical, SolidWorks, Onshape, OpenRocket, RocketPy
+  \item \textbf{Machines:} Scanning Electron Microscope (SEM), Metal X 3D Printer, CNC, WaterJet, Lathe
+  \item \textbf{Programming Languages:} MATLAB, Python
+\end{itemize}
+
+% Projects
+\section{Projects}
+
+\textbf{Unmanned Aerial Vehicle (UAV)}
+\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt]
+  \item Engineered a custom UAV with 3D-printed parts to support customizability and quick repairs.
+  \item Conducted ANSYS CFD simulation to validate cornual surface performance.
+\end{itemize}
+
+\textbf{Rocketry}
+\begin{itemize}[leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt]
+  \item Built a two-stage rocket that reached over 2,500 feet and utilized my custom recovery system.
+\end{itemize}
+
+\end{document}
