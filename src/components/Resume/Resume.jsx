@@ -54,22 +54,9 @@ const Resume = () => {
               Liberty University, Lynchburg, VA
             </p>
             <p className="resume__gpa">GPA: 3.82</p>
-            <div className="resume__coursework">
-              <h4 className="resume__coursework-title">Relevant Coursework:</h4>
-              <ul className="resume__coursework-list">
-                <li>Fluid Dynamics</li>
-                <li>Heat Transfer</li>
-                <li>Thermodynamics I and II</li>
-                <li>Differential Equations</li>
-                <li>Dynamics</li>
-                <li>Materials Engineering</li>
-                <li>University Physics II</li>
-                <li>Statics</li>
-                <li>Engineering Economy</li>
-                <li>Physics I and II</li>
-                <li>Calculus I, II, III</li>
-              </ul>
-            </div>
+            <p className="resume__coursework">
+              <strong>Relevant Coursework:</strong> Fluid Dynamics, Heat Transfer, Thermodynamics I and II, Differential Equations, Dynamics, Materials Engineering, University Physics II, Statics, Engineering Economy, Physics I and II, Calculus I, II, III
+            </p>
           </div>
         </section>
 

@@ -6,7 +6,6 @@ import ExperiencePage from "./pages/ExperiencePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ResumePage from "./pages/ResumePage";
 import ContactPage from "./pages/ContactPage";
-import InteractiveDemoPage from "./pages/InteractiveDemoPage";
 
 /**
  * Main App Component
@@ -32,7 +31,6 @@ function App() {
           <Route path="experience" element={<ExperiencePage />} />
           <Route path="projects" element={<ProjectsPage />} />
           <Route path="resume" element={<ResumePage />} />
-          <Route path="demos" element={<InteractiveDemoPage />} />
           <Route path="contact" element={<ContactPage />} />
         </Route>
       </Routes>

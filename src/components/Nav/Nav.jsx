@@ -19,8 +19,7 @@ const Nav = () => {
     { to: "/experience", label: "Experience", num: "02" },
     { to: "/projects", label: "Projects", num: "03" },
     { to: "/resume", label: "Resume", num: "04" },
-    { to: "/demos", label: "Demos", num: "05" },
-    { to: "/contact", label: "Contact", num: "06" },
+    { to: "/contact", label: "Contact", num: "05" },
   ];
 
   const handleLinkClick = () => {
