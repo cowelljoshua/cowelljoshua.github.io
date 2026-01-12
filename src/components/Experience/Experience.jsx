@@ -35,9 +35,10 @@ const Experience = () => {
         "Manage requirements definition, interface control, and configuration management throughout the development lifecycle",
         "Oversee a $16,000+ project budget, vendor coordination, and schedule milestones for competition campaigns",
         "Perform verification and validation (V&V) using SolidWorks, ANSYS, and MATLAB for subsystem models",
-        "Designed and manufactured a fully 3D printed rocket achieving Mach 0.5+ and 3,000 ft altitude using PET-GF15 and PETG materials with modular threaded assemblies; performed ANSYS CFD analysis for aerodynamic optimization",
       ],
       technologies: ["SolidWorks", "ANSYS", "MATLAB", "Systems Engineering"],
+      downloadLink: "/trinity_technical_report.pdf",
+      downloadLabel: "Download 2025 Technical Report",
     },
     {
       company: "Liberty University",
@@ -125,6 +126,27 @@ const Experience = () => {
                   </span>
                 ))}
               </div>
+              {exp.downloadLink && (
+                <a
+                  href={exp.downloadLink}
+                  download
+                  className="experience__download-btn"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  {exp.downloadLabel}
+                </a>
+              )}
             </div>
           </div>
         ))}
