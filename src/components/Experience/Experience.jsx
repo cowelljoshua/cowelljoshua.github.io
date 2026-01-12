@@ -10,7 +10,7 @@ const Experience = () => {
     {
       company: "Framatome Nuclear",
       role: "Thermal Hydraulics Engineering Intern",
-      date: "May 2025 — Present",
+      date: "May 2025 — Dec 2025",
       description: [
         "Developed a predictive wear mathematical model in Python for critical reactor components, proving to be over 75% more accurate compared to the previous model",
         "Programmed a Python algorithm using a 6-dimensional Xarray to calculate safe reactor operating conditions, reducing computation time from >800 hours to minutes compared to prior methods",

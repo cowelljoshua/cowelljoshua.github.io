@@ -54,6 +54,22 @@ const Resume = () => {
               Liberty University, Lynchburg, VA
             </p>
             <p className="resume__gpa">GPA: 3.82</p>
+            <div className="resume__coursework">
+              <h4 className="resume__coursework-title">Relevant Coursework:</h4>
+              <ul className="resume__coursework-list">
+                <li>Fluid Dynamics</li>
+                <li>Heat Transfer</li>
+                <li>Thermodynamics I and II</li>
+                <li>Differential Equations</li>
+                <li>Dynamics</li>
+                <li>Materials Engineering</li>
+                <li>University Physics II</li>
+                <li>Statics</li>
+                <li>Engineering Economy</li>
+                <li>Physics I and II</li>
+                <li>Calculus I, II, III</li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -212,10 +228,6 @@ const Resume = () => {
               <li>
                 Conducted ANSYS CFD simulation to validate cornual surface
                 performance.
-              </li>
-              <li>
-                Developed and programmed a payload-deployment system to
-                accurately hit a 5-foot wide target.
               </li>
             </ul>
           </div>

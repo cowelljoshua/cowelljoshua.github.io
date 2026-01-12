@@ -1,0 +1,313 @@
+/* Reactor Control Game - Visual and Simple */
+
+.thermal-game {
+  background: linear-gradient(135deg, #0a0f1a 0%, #1a1a2e 100%);
+  border-radius: 16px;
+  padding: 24px;
+  color: #fff;
+}
+
+.thermal-game__header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.thermal-game__header h2 {
+  font-size: 24px;
+  margin: 0 0 4px 0;
+  background: linear-gradient(135deg, #fff, #f39c12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.thermal-game__header p {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+}
+
+/* Intro Screen */
+.thermal-game__intro {
+  text-align: center;
+  padding: 40px;
+}
+
+.thermal-game__intro p {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.thermal-game__intro strong {
+  color: #f39c12;
+}
+
+/* HUD */
+.thermal-game__hud {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.thermal-game__stat {
+  text-align: center;
+}
+
+.thermal-game__stat span {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.thermal-game__stat strong {
+  font-size: 20px;
+  font-family: "SF Mono", monospace;
+}
+
+.thermal-game__score {
+  color: #ffd700 !important;
+}
+
+/* Reactor Display */
+.thermal-game__reactor {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 12px;
+  min-height: 300px;
+}
+
+/* Vessel */
+.thermal-game__vessel {
+  position: relative;
+  width: 200px;
+  height: 280px;
+  background: linear-gradient(180deg, #2a2a3e 0%, #1a1a2e 100%);
+  border: 3px solid #3a3a5e;
+  border-radius: 10px 10px 50px 50px;
+  overflow: hidden;
+}
+
+/* Core glow effect */
+.thermal-game__core {
+  position: absolute;
+  inset: 20%;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+/* Fuel rods */
+.thermal-game__fuel-rods {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.thermal-game__fuel-rod {
+  width: 12px;
+  height: 80px;
+  background: #3a7bd5;
+  border-radius: 2px;
+  transition: background 0.3s;
+}
+
+/* Control rods */
+.thermal-game__control-rods {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  cursor: grab;
+  z-index: 5;
+  transition: top 0.05s linear;
+}
+
+.thermal-game__control-rods.dragging {
+  cursor: grabbing;
+}
+
+.thermal-game__control-rod {
+  width: 20px;
+  height: 100px;
+  background: linear-gradient(180deg, #555, #333);
+  border: 2px solid #666;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+}
+
+.thermal-game__rod-handle {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #888;
+}
+
+/* Coolant water */
+.thermal-game__coolant {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Temperature Gauge */
+.thermal-game__gauge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.thermal-game__gauge-label {
+  font-size: 10px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.thermal-game__gauge-bar {
+  position: relative;
+  width: 30px;
+  height: 200px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.thermal-game__gauge-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: height 0.2s, background 0.3s;
+  border-radius: 4px;
+}
+
+.thermal-game__danger-zone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20%;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(231,76,60,0.3),
+    rgba(231,76,60,0.3) 5px,
+    transparent 5px,
+    transparent 10px
+  );
+  border-bottom: 2px solid #e74c3c;
+}
+
+.thermal-game__gauge-max {
+  font-size: 10px;
+  color: #e74c3c;
+}
+
+/* Overlays */
+.thermal-game__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.85);
+  border-radius: 12px;
+  animation: fadeIn 0.3s ease;
+  z-index: 10;
+}
+
+.thermal-game__overlay--fail {
+  background: rgba(100,0,0,0.9);
+}
+
+.thermal-game__overlay--success {
+  background: rgba(0,60,0,0.9);
+}
+
+.thermal-game__overlay-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.thermal-game__overlay-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.thermal-game__overlay--fail .thermal-game__overlay-title {
+  color: #e74c3c;
+}
+
+.thermal-game__overlay--success .thermal-game__overlay-title {
+  color: #2ecc71;
+}
+
+.thermal-game__overlay-score {
+  font-size: 16px;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.thermal-game__btn {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.thermal-game__btn:hover {
+  background: rgba(255,255,255,0.15);
+  transform: scale(1.02);
+}
+
+.thermal-game__btn--start {
+  background: linear-gradient(135deg, #f39c12, #e74c3c);
+  border: none;
+  font-size: 16px;
+  padding: 14px 32px;
+}
+
+.thermal-game__btn--start:hover {
+  box-shadow: 0 4px 20px rgba(243,156,18,0.4);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Make reactor container relative for overlay positioning */
+.thermal-game__reactor {
+  position: relative;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .thermal-game__vessel { width: 160px; height: 240px; }
+  .thermal-game__hud { flex-wrap: wrap; gap: 12px; }
+}

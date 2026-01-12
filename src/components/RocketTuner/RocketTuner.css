@@ -1,0 +1,379 @@
+/* Rocket 10K Challenge - Motor + Ballast Selection */
+
+.rocket-game {
+  background: linear-gradient(180deg, #0a0a1a 0%, #1a1a3e 100%);
+  border-radius: 16px;
+  padding: 24px;
+  color: #fff;
+}
+
+.rocket-game__header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.rocket-game__header h2 {
+  font-size: 24px;
+  margin: 0 0 4px 0;
+  background: linear-gradient(135deg, #fff, #e63946);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rocket-game__header p {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+}
+
+/* Main layout */
+.rocket-game__main {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 20px;
+}
+
+/* Flight visualization */
+.rocket-game__flight {
+  position: relative;
+  height: 380px;
+  background: linear-gradient(180deg, #000 0%, #0a1628 40%, #1a3a5c 80%, #3a6a8c 100%);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Scale */
+.rocket-game__scale {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 30px;
+  width: 40px;
+}
+
+.rocket-game__tick {
+  position: absolute;
+  left: 8px;
+  font-size: 10px;
+  color: rgba(255,255,255,0.3);
+  transform: translateY(50%);
+}
+
+.rocket-game__tick::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  width: 100vw;
+  height: 1px;
+  background: rgba(255,255,255,0.05);
+}
+
+/* Target line */
+.rocket-game__target {
+  position: absolute;
+  left: 40px;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2ecc71, #2ecc71 80%, transparent);
+  box-shadow: 0 0 15px #2ecc71;
+}
+
+.rocket-game__target span {
+  position: absolute;
+  right: 10px;
+  top: -18px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #2ecc71;
+  background: rgba(0,0,0,0.7);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Rocket */
+.rocket-game__rocket {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 80px;
+  z-index: 10;
+  transition: bottom 0.05s linear;
+}
+
+.rocket-game__rocket.flying {
+  filter: drop-shadow(0 0 15px rgba(255,107,53,0.7));
+}
+
+.rocket-game__svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Altimeter */
+.rocket-game__altimeter {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "SF Mono", monospace;
+  color: #4a90d9;
+  background: rgba(0,0,0,0.7);
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+/* Ground */
+.rocket-game__ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: linear-gradient(180deg, #2d4a2d, #1a2e1a);
+}
+
+/* Result overlay */
+.rocket-game__result {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.8);
+  animation: fadeIn 0.3s ease;
+}
+
+.rocket-game__result--perfect { background: rgba(46,204,113,0.2); }
+.rocket-game__result--great { background: rgba(241,196,15,0.15); }
+
+.rocket-game__result-icon {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.rocket-game__result-alt {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "SF Mono", monospace;
+}
+
+.rocket-game__result-msg {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 6px;
+}
+
+.rocket-game__result--perfect .rocket-game__result-msg {
+  color: #2ecc71;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Controls panel */
+.rocket-game__controls {
+  background: rgba(0,0,0,0.3);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.rocket-game__panel-title {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.rocket-game__control-group {
+  margin-bottom: 20px;
+}
+
+.rocket-game__control-group label {
+  display: block;
+  font-size: 11px;
+  color: #888;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rocket-game__control-group label strong {
+  color: #4a90d9;
+  font-family: "SF Mono", monospace;
+}
+
+/* Motor buttons */
+.rocket-game__motors {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.rocket-game__motor-btn {
+  padding: 10px 8px;
+  background: rgba(255,255,255,0.05);
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.rocket-game__motor-btn:hover:not(:disabled) {
+  border-color: var(--motor-color);
+  background: rgba(255,255,255,0.08);
+}
+
+.rocket-game__motor-btn.active {
+  border-color: var(--motor-color);
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 0 12px rgba(255,255,255,0.1);
+}
+
+.rocket-game__motor-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.rocket-game__motor-name {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.rocket-game__motor-impulse {
+  display: block;
+  font-size: 10px;
+  color: #666;
+  margin-top: 2px;
+}
+
+/* Ballast control */
+.rocket-game__ballast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rocket-game__ballast button {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.rocket-game__ballast button:hover:not(:disabled) {
+  background: rgba(255,255,255,0.15);
+}
+
+.rocket-game__ballast button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.rocket-game__ballast-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.rocket-game__ballast-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4a90d9, #e63946);
+  border-radius: 4px;
+  transition: width 0.15s ease;
+}
+
+/* Prediction display */
+.rocket-game__prediction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.rocket-game__prediction span {
+  font-size: 11px;
+  color: #888;
+}
+
+.rocket-game__prediction strong {
+  font-size: 16px;
+  font-family: "SF Mono", monospace;
+}
+
+/* Launch button */
+.rocket-game__launch {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #e63946, #ff6b35);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.rocket-game__launch:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(230,57,70,0.4);
+}
+
+.rocket-game__retry {
+  width: 100%;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.rocket-game__retry:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.rocket-game__status {
+  text-align: center;
+  padding: 14px;
+  color: #f39c12;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .rocket-game__main {
+    grid-template-columns: 1fr;
+  }
+  .rocket-game__flight {
+    height: 300px;
+  }
+}

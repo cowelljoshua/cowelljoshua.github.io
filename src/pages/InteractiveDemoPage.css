@@ -1,0 +1,105 @@
+/* ============================================
+   INTERACTIVE DEMO PAGE
+   Tab navigation for engineering simulations
+   ============================================ */
+
+.interactive-demo {
+  min-height: 100vh;
+  padding: 100px 40px 60px;
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.interactive-demo__container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.interactive-demo__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.interactive-demo__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 12px 0;
+}
+
+.interactive-demo__subtitle {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tabs */
+.interactive-demo__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.interactive-demo__tab {
+  padding: 14px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.interactive-demo__tab:hover {
+  border-color: #4a90d9;
+  color: #4a90d9;
+  transform: translateY(-2px);
+}
+
+.interactive-demo__tab.active {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-color: #1a1a2e;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(26, 26, 46, 0.2);
+}
+
+/* Content Area */
+.interactive-demo__content {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .interactive-demo {
+    padding: 100px 20px 40px;
+  }
+
+  .interactive-demo__title {
+    font-size: 28px;
+  }
+
+  .interactive-demo__tab {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+}

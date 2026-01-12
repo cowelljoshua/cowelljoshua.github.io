@@ -1,0 +1,518 @@
+/* ============================================
+   SPLIT-HOPKINSON PRESSURE BAR TESTER
+   High strain-rate material testing simulation
+   ============================================ */
+
+.shpb-tester {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 50%, #1a1a2e 100%);
+  border-radius: 16px;
+  padding: 32px;
+  color: #ffffff;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+}
+
+.shpb-tester__header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.shpb-tester__title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  background: linear-gradient(135deg, #ffffff 0%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shpb-tester__subtitle {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.shpb-tester__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Apparatus Visualization */
+.shpb-tester__apparatus {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.shpb-tester__apparatus-container {
+  position: relative;
+  padding-top: 24px;
+}
+
+.shpb-tester__apparatus-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  padding: 0 20px;
+}
+
+.shpb-tester__bars {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  position: relative;
+}
+
+.shpb-tester__bar {
+  height: 24px;
+  border-radius: 4px;
+  position: relative;
+}
+
+/* Striker */
+.shpb-tester__striker {
+  width: 60px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.shpb-tester__bar--striker {
+  width: 100%;
+  background: linear-gradient(180deg, #6b7280 0%, #4b5563 50%, #374151 100%);
+  border: 1px solid #9ca3af;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Incident Bar */
+.shpb-tester__incident {
+  flex: 1;
+  margin-left: 4px;
+}
+
+.shpb-tester__bar--incident {
+  width: 100%;
+  background: linear-gradient(180deg, #9ca3af 0%, #6b7280 50%, #4b5563 100%);
+  border: 1px solid #d1d5db;
+  overflow: hidden;
+}
+
+/* Sample */
+.shpb-tester__sample-container {
+  width: 30px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.shpb-tester__sample {
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.1s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.shpb-tester__sample-label {
+  font-size: 6px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+}
+
+/* Transmitted Bar */
+.shpb-tester__transmitted {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.shpb-tester__bar--transmitted {
+  width: 100%;
+  background: linear-gradient(180deg, #9ca3af 0%, #6b7280 50%, #4b5563 100%);
+  border: 1px solid #d1d5db;
+  overflow: hidden;
+}
+
+/* Wave Animation */
+.shpb-tester__wave {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  pointer-events: none;
+  transition: left 0.05s linear, right 0.05s linear;
+}
+
+.shpb-tester__wave--incident {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(74, 144, 217, 0.6) 30%,
+    rgba(74, 144, 217, 0.9) 50%,
+    rgba(74, 144, 217, 0.6) 70%,
+    transparent 100%
+  );
+  box-shadow: 0 0 15px rgba(74, 144, 217, 0.5);
+}
+
+.shpb-tester__wave--transmitted {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(46, 204, 113, 0.6) 30%,
+    rgba(46, 204, 113, 0.9) 50%,
+    rgba(46, 204, 113, 0.6) 70%,
+    transparent 100%
+  );
+  box-shadow: 0 0 15px rgba(46, 204, 113, 0.5);
+}
+
+/* Strain Gauges */
+.shpb-tester__strain-gauge {
+  position: absolute;
+  top: -18px;
+  width: 24px;
+  height: 14px;
+  background: #1a1a2e;
+  border: 1px solid #4a90d9;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shpb-tester__strain-gauge span {
+  font-size: 7px;
+  color: #4a90d9;
+  font-weight: 600;
+}
+
+.shpb-tester__strain-gauge--1 {
+  left: 30%;
+}
+
+.shpb-tester__strain-gauge--2 {
+  left: 60%;
+}
+
+/* Impact Flash */
+.shpb-tester__impact-flash {
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 40px;
+  background: radial-gradient(circle, rgba(255, 200, 100, 0.8) 0%, transparent 70%);
+  animation: flash 0.3s ease-out;
+  pointer-events: none;
+}
+
+@keyframes flash {
+  0% { opacity: 1; transform: translateY(-50%) scale(1); }
+  100% { opacity: 0; transform: translateY(-50%) scale(2); }
+}
+
+/* Phase Indicator */
+.shpb-tester__phase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.shpb-tester__phase-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.shpb-tester__phase-dot.active {
+  background: #4a90d9;
+  box-shadow: 0 0 8px #4a90d9;
+}
+
+.shpb-tester__phase-label {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+/* Data Panel */
+.shpb-tester__data-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Graph */
+.shpb-tester__graph {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.shpb-tester__graph-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #9ca3af;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.shpb-tester__graph-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Controls */
+.shpb-tester__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.shpb-tester__control {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.shpb-tester__control label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #d1d5db;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.shpb-tester__control-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.shpb-tester__control-header label {
+  margin-bottom: 0;
+}
+
+.shpb-tester__value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #4a90d9;
+  font-family: "SF Mono", "Fira Code", monospace;
+}
+
+.shpb-tester__select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.shpb-tester__select:hover:not(:disabled) {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.shpb-tester__select:focus {
+  border-color: #4a90d9;
+}
+
+.shpb-tester__select option {
+  background: #1a1a2e;
+  color: #ffffff;
+}
+
+.shpb-tester__slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.shpb-tester__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd700 0%, #f7931e 100%);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.shpb-tester__slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.shpb-tester__slider:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Run Button */
+.shpb-tester__run-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a2e;
+  background: linear-gradient(135deg, #ffd700 0%, #f7931e 100%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.shpb-tester__run-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+}
+
+.shpb-tester__run-btn:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.shpb-tester__run-btn.running {
+  background: linear-gradient(135deg, #f7931e 0%, #e67e22 100%);
+}
+
+.shpb-tester__btn-icon {
+  font-size: 16px;
+}
+
+.shpb-tester__spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(26, 26, 46, 0.3);
+  border-top-color: #1a1a2e;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Results */
+.shpb-tester__results {
+  grid-column: 1 / -1;
+  background: rgba(46, 204, 113, 0.1);
+  border: 2px solid #2ecc71;
+  border-radius: 12px;
+  padding: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+.shpb-tester__results--failed {
+  background: rgba(231, 76, 60, 0.1);
+  border-color: #e74c3c;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.shpb-tester__results-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.shpb-tester__results-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.shpb-tester__result-item {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+.shpb-tester__result-item span {
+  display: block;
+  font-size: 10px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.shpb-tester__result-item strong {
+  font-size: 16px;
+  font-family: "SF Mono", "Fira Code", monospace;
+  color: #ffffff;
+}
+
+.shpb-tester__material-props {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #6b7280;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .shpb-tester {
+    padding: 20px;
+  }
+
+  .shpb-tester__data-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .shpb-tester__results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shpb-tester__material-props {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
