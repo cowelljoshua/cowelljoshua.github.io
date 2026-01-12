@@ -35,6 +35,7 @@ const Experience = () => {
         "Manage requirements definition, interface control, and configuration management throughout the development lifecycle",
         "Oversee a $16,000+ project budget, vendor coordination, and schedule milestones for competition campaigns",
         "Perform verification and validation (V&V) using SolidWorks, ANSYS, and MATLAB for subsystem models",
+        "Designed and manufactured a fully 3D printed rocket achieving Mach 0.5+ and 3,000 ft altitude using PET-GF15 and PETG materials with modular threaded assemblies; performed ANSYS CFD analysis for aerodynamic optimization",
       ],
       technologies: ["SolidWorks", "ANSYS", "MATLAB", "Systems Engineering"],
     },
