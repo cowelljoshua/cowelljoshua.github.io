@@ -261,7 +261,7 @@ const Resume = () => {
 
           <div className="resume__project-item">
             <h3 className="resume__project-title">
-              3D Printed High-Power Rocket
+              3D Printed Model Rocket
             </h3>
             <ul className="resume__bullets">
               <li>
