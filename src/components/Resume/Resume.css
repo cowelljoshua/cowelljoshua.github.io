@@ -153,6 +153,18 @@
   color: #000;
 }
 
+/* Activities */
+.resume__activities {
+  font-size: 11px;
+  color: #333;
+  margin: 4px 0 0 0;
+  line-height: 1.5;
+}
+
+.resume__activities strong {
+  color: #000;
+}
+
 .resume__company {
   font-size: 11px;
   color: #000;

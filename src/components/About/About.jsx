@@ -92,8 +92,8 @@ const About = () => {
               computational modeling.
             </p>
             <p className="bento__bio-text">
-              Currently interning at Framatome Nuclear where I develop predictive 
-              wear models and optimize reactor safety systems.
+              Former Intern at Framatome Nuclear where I developed predictive 
+              wear models and optimized reactor safety systems.
             </p>
           </div>
 

@@ -27,7 +27,7 @@ const Experience = () => {
     {
       company: "Liberty Rocketry (9th/156 international teams in 2024)",
       website: "https://libertyrocketry.org",
-      role: "Chief Systems Engineer",
+      role: "Chief Systems Engineer and Team Lead",
       date: "June 2025 — Present",
       description: [
         "Lead a cross-functional team of 60+ members in the design, integration, and verification of high-powered rocket systems",

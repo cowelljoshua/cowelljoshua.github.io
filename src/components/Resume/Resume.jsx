@@ -57,6 +57,9 @@ const Resume = () => {
             <p className="resume__coursework">
               <strong>Relevant Coursework:</strong> Fluid Dynamics, Heat Transfer, Thermodynamics I &amp; II, Differential Equations, Dynamics, Materials Engineering, Statics, Calculus I-III
             </p>
+            <p className="resume__activities">
+              <strong>Activities:</strong> American Nuclear Society (ANS) — Founding Member (Nov 2025)
+            </p>
           </div>
         </section>
 
@@ -97,7 +100,7 @@ const Resume = () => {
 
           <div className="resume__experience-item">
             <div className="resume__item-header">
-              <h3 className="resume__item-title">Chief Systems Engineer</h3>
+              <h3 className="resume__item-title">Chief Systems Engineer and Team Lead</h3>
               <span className="resume__item-date">June 2025 - Present</span>
             </div>
             <p className="resume__company">
