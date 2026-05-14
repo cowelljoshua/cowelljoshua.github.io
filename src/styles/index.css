@@ -109,7 +109,6 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: -webkit-fill-available;
-  zoom: 0.75;
 }
 
 body {
