@@ -27,7 +27,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="nav" style={{ zoom: 0.7 }}>
+    <nav className="nav" style={{ zoom: 0.8 }}>
       <div className="nav__container">
         <Link to="/" className="nav__logo" title="Go to Home">
           <svg className="nav__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
