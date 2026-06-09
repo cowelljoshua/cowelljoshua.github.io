@@ -86,7 +86,7 @@ const Projects = () => {
       id: 2,
       title: "Reactor Operating Limit Algorithm",
       description:
-        "Engineered a Python algorithm to calculate safe reactor operating conditions, reducing computation time from 800+ manual calculation hours to minutes.",
+        "Engineered a Python algorithm to calculate safe reactor operating conditions, reducing computation time from 1000+ manual calculation hours to minutes.",
       fullDescription:
         "Developed a comprehensive automation framework that eliminates manual engineering calculations and documentation workflows. The system leverages Python with advanced data structures and multidimensional array processing to handle complex, iterative calculations that previously required extensive spreadsheet work and manual verification. Implemented data versioning and configuration management to ensure calculation traceability and reproducibility, critical for regulatory compliance in nuclear environments. Integrated automated report generation that produces professionally formatted technical documentation with embedded visualizations, analysis tables, and engineering conclusions. The system processes calculations that scale from thousands to millions of data points, enabling engineers to focus on interpretation and decision-making rather than tedious computational grunt work. This architecture significantly reduces human error, improves consistency across analyses, and accelerates the engineering review cycle from weeks to days.",
       gradient: "cfd",
