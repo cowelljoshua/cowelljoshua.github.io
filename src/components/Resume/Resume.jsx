@@ -7,7 +7,7 @@ const Resume = () => {
         {/* Download Button */}
         <div className="resume__download-section">
           <a
-            href="/resume/Josh_Cowell's_Resume.pdf"
+            href="/resume/Cowell Resume.pdf"
             download
             className="resume__download-btn"
           >
@@ -53,9 +53,9 @@ const Resume = () => {
             <p className="resume__item-subtitle">
               Liberty University, Lynchburg, VA
             </p>
-            <p className="resume__gpa">GPA: 3.82</p>
+            <p className="resume__gpa">GPA: 3.85</p>
             <p className="resume__coursework">
-              <strong>Relevant Coursework:</strong> Fluid Dynamics, Heat Transfer, Thermodynamics I &amp; II, Differential Equations, Dynamics, Materials Engineering, Statics, Calculus I-III
+              <strong>Relevant Coursework:</strong> Fluid Dynamics, Heat Transfer, Thermodynamics I &amp; II, Thermal-Fluids Laboratory, Differential Equations, Dynamics, Materials Engineering, Statics, Calculus I-III, Computer-Aided Engineering
             </p>
             <p className="resume__activities">
               <strong>Activities:</strong> American Nuclear Society (ANS) — Founding Member (Nov 2025)
@@ -147,25 +147,6 @@ const Resume = () => {
                 Design test procedures and fixtures for high-strain-rate
                 experiments; analyze results using electron microscopy and
                 high-speed imaging.
-              </li>
-            </ul>
-          </div>
-
-          <div className="resume__experience-item">
-            <div className="resume__item-header">
-              <h3 className="resume__item-title">Senior Structural Engineer</h3>
-              <span className="resume__item-date">Sep 2023 - June 2025</span>
-            </div>
-            <p className="resume__company">Liberty Rocketry</p>
-            <ul className="resume__bullets">
-              <li>
-                Conducted finite element analysis (FEA) and computational fluid
-                dynamics (CFD) simulations to verify structural integrity and
-                aerodynamic performance.
-              </li>
-              <li>
-                Authored technical reports documenting analysis methodology,
-                results, and compliance with competition requirements.
               </li>
             </ul>
           </div>

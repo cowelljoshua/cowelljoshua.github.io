@@ -116,7 +116,7 @@ const About = () => {
           {/* Achievement Highlights */}
           <div className="bento__cell bento__cell--highlights">
             <div className="bento__highlight">
-              <span className="bento__highlight-value">3.82</span>
+              <span className="bento__highlight-value">3.85</span>
               <span className="bento__highlight-label">GPA</span>
             </div>
             <div className="bento__highlight">
