@@ -37,8 +37,8 @@ const Experience = () => {
         "Perform verification and validation (V&V) using SolidWorks, ANSYS, and MATLAB for subsystem models",
       ],
       technologies: ["SolidWorks", "ANSYS", "MATLAB", "Systems Engineering"],
-      downloadLink: "/trinity_technical_report.pdf",
-      downloadLabel: "Download 2025 Technical Report",
+      downloadLink: "/omega_technical_report.pdf",
+      downloadLabel: "Download 2026 Technical Report",
     },
     {
       company: "Liberty University",
