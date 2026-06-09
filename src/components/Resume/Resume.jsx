@@ -213,7 +213,7 @@ const Resume = () => {
             </h3>
             <ul className="resume__bullets">
               <li>
-                Engineered a Python automation framework reducing 800+ hours of
+                Engineered a Python automation framework reducing 1000+ hours of
                 manual engineering calculations to minutes
               </li>
             </ul>
