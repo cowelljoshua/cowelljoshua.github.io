@@ -84,7 +84,7 @@ const Resume = () => {
               <li>
                 Engineered a Python algorithm processing 6-dimensional datasets to
                 calculate safe operating limits, reducing analysis time from
-                800+ hours to minutes.
+                1000+ hours to minutes.
               </li>
               <li>
                 Performed system-level thermal-hydraulic and flow-induced
