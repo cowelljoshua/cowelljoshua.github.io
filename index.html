@@ -4,11 +4,32 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="author" content="Joshua Cowell" />
     <meta
       name="description"
-      content="Mechanical Engineer Portfolio - Aerospace, Robotics & Advanced Manufacturing"
+      content="Joshua Cowell — Mechanical Engineering student specializing in rocketry, thermal-hydraulics, nuclear systems, and high-strain-rate materials research."
     />
-    <title>Cowell | Mechanical Engineer</title>
+    <title>Joshua Cowell | Mechanical Engineer</title>
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://joshuacowell.com/" />
+    <meta property="og:title" content="Joshua Cowell | Mechanical Engineer" />
+    <meta
+      property="og:description"
+      content="Mechanical Engineering student specializing in rocketry, thermal-hydraulics, nuclear systems, and high-strain-rate materials research."
+    />
+    <meta property="og:image" content="https://joshuacowell.com/homepage.jpg" />
+    <meta property="og:image:alt" content="Joshua Cowell — Mechanical Engineer" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Joshua Cowell | Mechanical Engineer" />
+    <meta
+      name="twitter:description"
+      content="Mechanical Engineering student specializing in rocketry, thermal-hydraulics, nuclear systems, and high-strain-rate materials research."
+    />
+    <meta name="twitter:image" content="https://joshuacowell.com/homepage.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,5 +41,11 @@
   <body style="background-color: #ffffff; margin: 0; padding: 0;">
     <div id="root"></div>
 
+    <!-- Hidden static form so Netlify detects the React-rendered contact form at build time -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
   </body>
 </html>

@@ -63,6 +63,44 @@ const Projects = () => {
     };
   }, [selectedProject]);
 
+  // Focus trap: keep keyboard focus inside the modal while it's open,
+  // and restore focus to the triggering element when it closes.
+  useEffect(() => {
+    if (!selectedProject) return;
+    const modalEl = modalRef.current;
+    if (!modalEl) return;
+
+    const previouslyFocused = document.activeElement;
+    const getFocusable = () =>
+      modalEl.querySelectorAll(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      );
+
+    const focusables = getFocusable();
+    if (focusables.length) focusables[0].focus();
+
+    const handleTab = (e) => {
+      if (e.key !== "Tab") return;
+      const items = getFocusable();
+      if (!items.length) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+
+    modalEl.addEventListener("keydown", handleTab);
+    return () => {
+      modalEl.removeEventListener("keydown", handleTab);
+      if (previouslyFocused && previouslyFocused.focus) previouslyFocused.focus();
+    };
+  }, [selectedProject]);
+
   const projects = [
     {
       id: 1,

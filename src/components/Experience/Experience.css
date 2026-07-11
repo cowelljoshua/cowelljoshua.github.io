@@ -3,6 +3,18 @@
    Elegant timeline layout
    ============================================ */
 
+.experience-page {
+  padding-top: 80px;
+  zoom: 0.75;
+}
+
+@media (max-width: 768px) {
+  .experience-page {
+    padding-top: 100px;
+    zoom: 1;
+  }
+}
+
 .experience {
   background-color: #ffffff;
   position: relative;

@@ -9,11 +9,11 @@ const About = () => {
   const skills = [
     {
       name: "Python",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+      logo: "/logos/python.svg",
     },
     {
       name: "MATLAB",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png",
+      logo: "/logos/matlab.png",
     },
     {
       name: "SolidWorks",
@@ -156,12 +156,10 @@ const About = () => {
                 alt={photo.alt}
                 className="bento__photo"
                 onLoad={(e) => {
-                  console.log(`Image loaded: ${photo.src}`);
                   e.target.parentElement.classList.add('bento__cell--loaded');
                   e.target.style.opacity = '1';
                 }}
                 onError={(e) => {
-                  console.log(`Failed to load image: ${photo.src}`);
                   e.target.style.display = 'none';
                 }}
                 style={{ 

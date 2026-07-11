@@ -13,7 +13,6 @@
   background-image: url("/homepage.jpg");
   background-size: cover;
   background-position: center bottom;
-  background-attachment: fixed;
   padding: 0;
   margin: 0;
 }

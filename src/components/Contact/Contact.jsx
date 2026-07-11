@@ -3,16 +3,36 @@ import "./Contact.css";
 
 /**
  * Contact Section Component
- * Clean, minimal centered layout
+ * Clean, minimal centered layout with a Netlify-powered contact form.
  */
 const Contact = () => {
   const [copied, setCopied] = useState(false);
+  const [status, setStatus] = useState("idle"); // idle | sending | success | error
 
   const handleEmailClick = (e) => {
     e.preventDefault();
     navigator.clipboard.writeText("joshuacowell2005@gmail.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    setStatus("sending");
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(data).toString(),
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Submit failed");
+        setStatus("success");
+        form.reset();
+      })
+      .catch(() => setStatus("error"));
   };
 
   return (
@@ -24,9 +44,67 @@ const Contact = () => {
             Have a question or want to work together? I'd love to hear from you.
           </p>
 
+          {status === "success" ? (
+            <div className="contact__success">
+              <div className="contact__success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <p className="contact__success-title">Message sent!</p>
+              <p className="contact__success-text">
+                Thanks for reaching out — I'll get back to you soon.
+              </p>
+            </div>
+          ) : (
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
+              className="contact__form"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <p className="contact__hp">
+                <label>
+                  Don't fill this out if you're human: <input name="bot-field" />
+                </label>
+              </p>
+
+              <div className="contact__field">
+                <input type="text" name="name" placeholder="Your name" required />
+              </div>
+              <div className="contact__field">
+                <input type="email" name="email" placeholder="Your email" required />
+              </div>
+              <div className="contact__field">
+                <textarea name="message" rows="4" placeholder="Your message" required />
+              </div>
+
+              {status === "error" && (
+                <p className="contact__form-error">
+                  Something went wrong. Please email me directly below.
+                </p>
+              )}
+
+              <button
+                type="submit"
+                className="contact__submit"
+                disabled={status === "sending"}
+              >
+                {status === "sending" ? "Sending..." : "Send Message"}
+              </button>
+            </form>
+          )}
+
+          <div className="contact__divider"></div>
+
+          <p className="contact__alt-label">Or reach me directly</p>
+
           <div className="contact__email-wrapper">
-            <a 
-              href="mailto:joshuacowell2005@gmail.com" 
+            <a
+              href="mailto:joshuacowell2005@gmail.com"
               className="contact__email"
               onClick={handleEmailClick}
             >

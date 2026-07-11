@@ -12,6 +12,15 @@
   z-index: 3000;
   padding: 0;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  zoom: 0.9;
+}
+
+/* Let the nav render at its natural, already-responsive mobile size
+   instead of an extra 90% shrink stacked on top of it */
+@media (max-width: 768px) {
+  .nav {
+    zoom: 1;
+  }
 }
 
 .nav__container {

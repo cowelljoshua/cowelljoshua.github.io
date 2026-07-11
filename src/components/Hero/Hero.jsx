@@ -9,11 +9,6 @@ import "./Hero.css";
 const Hero = () => {
   const navigate = useNavigate();
 
-  const handleViewProjects = (e) => {
-    e.preventDefault();
-    navigate("/projects");
-  };
-
   const handleContactMe = (e) => {
     e.preventDefault();
     navigate("/contact");

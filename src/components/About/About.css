@@ -3,6 +3,18 @@
    Modern asymmetric grid with glassmorphism
    ============================================ */
 
+.about-page {
+  zoom: 0.75;
+}
+
+/* The 0.75 zoom shrinks fonts/spacing unevenly against the nav on mobile
+   (title looks off-size and sits too close to the nav), so skip it there */
+@media (max-width: 768px) {
+  .about-page {
+    zoom: 1;
+  }
+}
+
 .about-bento {
   min-height: 100vh;
   background: #ffffff;
@@ -522,7 +534,7 @@
 
 @media (max-width: 600px) {
   .about-bento {
-    padding: 80px 0 40px;
+    padding: 120px 0 40px;
   }
   
   .bento__container {
