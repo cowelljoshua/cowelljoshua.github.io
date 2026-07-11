@@ -6,7 +6,7 @@
 .about-bento {
   min-height: 100vh;
   background: #ffffff;
-  padding: 100px 0 96px;
+  padding: 40px 0 96px;
   position: relative;
 }
 
@@ -557,6 +557,10 @@
 }
 
 @media (max-width: 768px) {
+  .about-bento {
+    padding-top: 100px;
+  }
+
   .about-page {
     padding-top: 100px;
   }

@@ -16,6 +16,7 @@
 .experience {
   background-color: #ffffff;
   position: relative;
+  padding-top: 40px;
   min-height: 100vh;
 }
 
@@ -280,6 +281,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .experience {
+    padding-top: var(--section-padding);
+  }
+
   /* Hide the rocket images on mobile */
   .experience::before,
   .experience::after {

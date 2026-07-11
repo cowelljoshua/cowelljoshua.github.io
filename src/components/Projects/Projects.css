@@ -9,6 +9,7 @@
 
 .projects {
   background: var(--color-white);
+  padding-top: 40px;
 }
 
 .projects__header {
@@ -472,6 +473,10 @@
 
 /* Responsive - Complete mobile takeover */
 @media (max-width: 1024px) {
+  .projects {
+    padding-top: var(--section-padding);
+  }
+
   .projects__grid {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
