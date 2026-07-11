@@ -4,14 +4,12 @@
    ============================================ */
 
 .experience-page {
-  padding-top: 80px;
-  zoom: 0.75;
+  padding-top: 100px;
 }
 
 @media (max-width: 768px) {
   .experience-page {
     padding-top: 100px;
-    zoom: 1;
   }
 }
 
@@ -91,7 +89,7 @@
 /* Timeline container */
 .experience__timeline {
   position: relative;
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   z-index: 2;
 }

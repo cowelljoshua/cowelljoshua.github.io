@@ -6,22 +6,50 @@
 .about-bento {
   min-height: 100vh;
   background: #ffffff;
-  padding: 120px 0 80px;
+  padding: 100px 0 96px;
   position: relative;
 }
 
+/* Match the desktop scale and navigation clearance used on Experience. */
+.about-page {
+  padding-top: 100px;
+}
+
 .bento__container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--space-xl);
   position: relative;
   z-index: 1;
 }
 
+@media (min-width: 769px) {
+  .about-page {
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+    --font-size-4xl: 2.5rem;
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+    --space-4xl: 6rem;
+  }
+}
+
 /* Header */
 .bento__header {
   text-align: center;
-  margin-bottom: var(--space-3xl);
+  margin-bottom: var(--space-4xl);
+  position: relative;
+  z-index: 2;
 }
 
 .bento__eyebrow {
@@ -39,7 +67,15 @@
   font-weight: var(--font-weight-semibold);
   color: var(--color-dark-gray);
   line-height: var(--line-height-tight);
-  margin: 0;
+  margin: 0 0 var(--space-md);
+}
+
+.bento__subtitle {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-dark-gray);
 }
 
 /* Bento Grid */
@@ -158,10 +194,10 @@
 }
 
 .bento__bio-text {
-  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
   color: #1d1d1f;
-  line-height: 1.5;
-  font-weight: 600;
+  line-height: 1.6;
+  font-weight: var(--font-weight-medium);
   letter-spacing: -0.01em;
   margin-bottom: var(--space-xl);
 }
@@ -517,6 +553,12 @@
     grid-column: span 6;
     grid-row: span 1;
     min-height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 100px;
   }
 }
 

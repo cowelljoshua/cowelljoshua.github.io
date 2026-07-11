@@ -62,6 +62,9 @@ const About = () => {
         <div className="bento__header">
           {/* <span className="bento__eyebrow">About Me</span> */}
           <h1 className="bento__title">About Me</h1>
+          <p className="bento__subtitle">
+            Mechanical engineering, aerospace systems, and life beyond the lab.
+          </p>
         </div>
 
         {/* Bento Grid */}
