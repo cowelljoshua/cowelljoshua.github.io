@@ -4,21 +4,7 @@
    ============================================ */
 
 .projects-page {
-  padding-top: 80px;
-  zoom: 0.8;
-  width: 125%;
-  margin-left: -12.5%;
-}
-
-/* The 0.8 zoom + 125% width compensation trick breaks down on mobile
-   viewports, so just render at natural size below the mobile breakpoint */
-@media (max-width: 768px) {
-  .projects-page {
-    padding-top: 100px;
-    zoom: 1;
-    width: 100%;
-    margin-left: 0;
-  }
+  padding-top: 100px;
 }
 
 .projects {
