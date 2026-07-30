@@ -104,16 +104,17 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Predictive Wear Model",
+      title: "Thermal Sleeve Wear Model",
       description:
-        "Developed a Python-based predictive wear model improving component-life accuracy by over 75%.",
+        "Rebuilt an Archard-based wear model after a thermal sleeve failed years ahead of its recommended inspection window, reducing prediction error to 1.07%.",
       fullDescription:
-        "Engineered a sophisticated Python-based predictive wear model for critical reactor components that addresses limitations in legacy analytical methods. Using advanced numerical techniques and statistical validation against historical performance data, the model achieves over 75% improvement in accuracy compared to previous approaches. The work involved developing multi-parameter algorithms that account for complex thermo-mechanical interactions, material fatigue mechanisms, and operational stress cycles. The resulting tool enables nuclear operators to make data-driven decisions regarding maintenance schedules, component replacement strategies, and safe operating conditions optimization, directly supporting safer and more efficient reactor operations.",
+        "A legacy equation derived from the Archard wear model predicted that a reactor thermal sleeve exposed to flow-induced vibration and thermal cycling would not require inspection for 15–20 years. The component failed after just over eight years. I audited the original derivation and calculation workbook, finding plant-specific variables treated as universal, assumptions that did not follow the derivation documentation, spreadsheet cells that failed to update, and an iteration count limited by the number of prebuilt rows. I rebuilt the calculation workflow in Python, corrected the assumptions, and validated the model against observed wear. The revised model reduced prediction error to 1.07%, giving engineers a more reliable basis for inspection and maintenance planning.",
       gradient: "robotics",
-      tags: ["Python", "Predictive Modeling", "Nuclear Engineering", "Data Analysis"],
+      tags: ["Python", "Wear Modeling", "Nuclear Engineering", "Model Validation"],
       details: [
-        "Improved component-life accuracy by over 75% through advanced algorithm development",
-        "Enabled predictive maintenance strategies and safe operating condition optimization",
+        "Traced a major life-prediction discrepancy back to incorrect assumptions and spreadsheet implementation errors",
+        "Rebuilt and validated the wear calculation, achieving 1.07% error against observed performance",
+        "Presented the findings to senior engineers and supported a technical memo to affected customers",
       ],
       icon: "layers",
       coverImage: "/nuclear_reactor1.webp",
@@ -122,17 +123,17 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Reactor Operating Limit Algorithm",
+      title: "Pressure–Temperature Limits Automation",
       description:
-        "Engineered a Python algorithm to calculate safe reactor operating conditions, reducing computation time from 1000+ manual calculation hours to minutes.",
+        "Automated a reactor safety calculation workflow that previously required more than 1,000 hours of senior engineering effort for each plant analysis.",
       fullDescription:
-        "Developed a comprehensive automation framework that eliminates manual engineering calculations and documentation workflows. The system leverages Python with advanced data structures and multidimensional array processing to handle complex, iterative calculations that previously required extensive spreadsheet work and manual verification. Implemented data versioning and configuration management to ensure calculation traceability and reproducibility, critical for regulatory compliance in nuclear environments. Integrated automated report generation that produces professionally formatted technical documentation with embedded visualizations, analysis tables, and engineering conclusions. The system processes calculations that scale from thousands to millions of data points, enabling engineers to focus on interpretation and decision-making rather than tedious computational grunt work. This architecture significantly reduces human error, improves consistency across analyses, and accelerates the engineering review cycle from weeks to days.",
+        "Pressure–temperature limits provide reactor operators with the safe pressure range for each temperature during plant heat-up and cooldown. Developing these limits requires engineers to evaluate material properties and identify reactor components most affected by thermal stress, neutron exposure, and fluid pressure. The legacy process relied on large, inconsistently structured Excel workbooks and more than 1,000 hours of senior engineering effort for each plant-specific analysis, which must be repeated periodically. After reviewing the governing methods and identifying errors that required part of a recent analysis to be redone, I developed a Python workflow using pandas, six-dimensional xarray datasets, CSV-based inputs, and a DVC YAML pipeline. By the end of my extended contract, the automated workflow produced final pressure–temperature limit curves that matched approximately 90% of the prior engineering results, while preserving human review for the judgment-intensive data selections that drive the remaining differences.",
       gradient: "cfd",
-      tags: ["Python", "Automation", "Data Analysis", "Engineering Documentation"],
+      tags: ["Python", "Pandas", "xarray", "DVC", "Nuclear Engineering"],
       details: [
-        "Automated workflow reducing 1000+ hours of manual calculations to minutes",
-        "Generated professional technical reports with embedded analysis and visualizations",
-        "Enabled analysis of millions of data points with consistent methodology",
+        "Converted a fragmented spreadsheet process into a traceable, repeatable calculation pipeline",
+        "Organized high-dimensional engineering data with pandas, xarray, CSV inputs, and DVC",
+        "Reproduced approximately 90% of previously issued limit curves while retaining human review at key decision points",
       ],
       icon: "flow",
       coverImage: "/nuclear_reactor2.webp",

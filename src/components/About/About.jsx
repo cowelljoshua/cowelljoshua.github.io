@@ -95,8 +95,9 @@ const About = () => {
               computational modeling.
             </p>
             <p className="bento__bio-text">
-              Former Intern at Framatome Nuclear where I developed predictive 
-              wear models and optimized reactor safety systems.
+              I am a former Thermal Hydraulics Engineering Intern at Framatome
+              Nuclear, where I rebuilt predictive wear models and automated
+              reactor safety calculations. I am currently an Advanced Weapons Systems Analyst Intern at the Central Intelligence Agency.
             </p>
           </div>
 

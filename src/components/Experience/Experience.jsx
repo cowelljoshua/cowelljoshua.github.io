@@ -8,9 +8,26 @@ import "./Experience.css";
 const Experience = () => {
   const experiences = [
     {
+      company: "Central Intelligence Agency (CIA)",
+      role: "Advanced Weapons Systems Analyst",
+      date: "May 2026 - Present",
+      description: [
+        "Conduct testing of warhead systems and analyze results to calibrate simulation models",
+        "Develop a Python-based geospatial analysis tool for operational planning, leveraging Claude Mythos to refine the program and meet team requirements",
+        "Conduct technical assessments of advanced unmanned systems and collaborate with multidisciplinary engineering teams to evaluate classified capabilities, translating findings into actionable intelligence for senior leadership and policymakers",
+        "Brief high-level Agency officials and write concise analytic products that communicate complex technical data in clear, decision-ready formats",
+      ],
+      technologies: [
+        "Python",
+        "Geospatial Analysis",
+        "Model Calibration",
+        "Technical Intelligence",
+      ],
+    },
+    {
       company: "Framatome Nuclear",
       role: "Thermal Hydraulics Engineering Intern",
-      date: "May 2025 — Dec 2025",
+      date: "May 2025 - Dec 2025",
       description: [
         "Developed a predictive wear model in Python for safety-critical reactor components, achieving 75% improvement in accuracy over legacy methods",
         "Engineered a Python algorithm processing 6-dimensional datasets to calculate safe operating limits, reducing analysis time from 1000+ hours to minutes",
@@ -25,25 +42,24 @@ const Experience = () => {
       ],
     },
     {
-      company: "Liberty Rocketry (9th/156 international teams in 2024)",
+      company: "Liberty Rocketry (Ranked 18th of 141 international teams at 2026 IREC)",
       website: "https://libertyrocketry.org",
       role: "Chief Systems Engineer and Team Lead",
-      date: "June 2025 — Present",
+      date: "June 2025 - Aug 2026",
       description: [
-        "Lead a cross-functional team of 60+ members in the design, integration, and verification of high-powered rocket systems",
-        "Direct systems engineering decisions across propulsion, avionics, recovery, and aerodynamics subsystems",
-        "Manage requirements definition, interface control, and configuration management throughout the development lifecycle",
-        "Oversee a $16,000+ project budget, vendor coordination, and schedule milestones for competition campaigns",
-        "Perform verification and validation (V&V) using SolidWorks, ANSYS, and MATLAB for subsystem models",
+        "Led the design, testing, and analysis of high-powered rocket systems as member captain",
+        "Oversaw engineering decisions across propulsion, avionics, recovery, and aerodynamics subsystems",
+        "Facilitated communication among internal teams, external vendors, and university faculty to improve project execution",
+        "Demonstrated advanced knowledge of SolidWorks, ANSYS, MATLAB, OpenRocket, and RocketPy to validate team members' models, simulations, and design work",
       ],
-      technologies: ["SolidWorks", "ANSYS", "MATLAB", "Systems Engineering"],
+      technologies: ["SolidWorks", "ANSYS", "MATLAB", "OpenRocket", "RocketPy", "Systems Engineering"],
       downloadLink: "/omega_technical_report.pdf",
       downloadLabel: "Download 2026 Technical Report",
     },
     {
       company: "Liberty University",
       role: "Lead Undergraduate Research Assistant",
-      date: "Sep 2024 — Present",
+      date: "Sep 2024 - Present",
       description: [
         "Lead a team of 5 researchers conducting split-Hopkinson pressure bar (SHPB) testing for dynamic material characterization",
         "Design test procedures and fixtures for high-strain-rate experiments; analyze results using electron microscopy and high-speed imaging",
@@ -54,7 +70,7 @@ const Experience = () => {
       company: "Liberty Rocketry",
       website: "https://libertyrocketry.org",
       role: "Senior Structural Engineer",
-      date: "Sep 2023 — June 2025",
+      date: "Sep 2023 - June 2025",
       description: [
         "Conducted finite element analysis (FEA) and computational fluid dynamics (CFD) simulations to verify structural integrity and aerodynamic performance",
         "Authored technical reports documenting analysis methodology, results, and compliance with competition requirements",

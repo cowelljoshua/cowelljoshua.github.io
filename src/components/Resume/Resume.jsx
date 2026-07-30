@@ -4,20 +4,9 @@ const Resume = () => {
   return (
     <div className="resume">
       <div className="resume__container">
-        {/* Download Button */}
         <div className="resume__download-section">
-          <a
-            href="/resume/Cowell Resume.pdf"
-            download
-            className="resume__download-btn"
-          >
-            <svg
-              className="resume__download-icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
+          <a href="/resume/Joshua_Cowell_Resume.pdf" download="Joshua_Cowell_Resume.pdf" className="resume__download-btn">
+            <svg className="resume__download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
               <polyline points="7 10 12 15 17 10" />
               <line x1="12" y1="15" x2="12" y2="3" />
@@ -26,249 +15,114 @@ const Resume = () => {
           </a>
         </div>
 
-        {/* Header */}
-        <div className="resume__header">
+        <header className="resume__header">
           <h1 className="resume__name">Joshua Cowell</h1>
+          <p className="resume__clearance">Active Top Secret / SCI Clearance | Full-Scope Polygraph</p>
           <div className="resume__contact">
-            <span>Lynchburg, VA</span>
-            <span>|</span>
-            <span>joshuacowell2005@gmail.com</span>
-            <span>|</span>
-            <span>cowelljoshua.github.io</span>
+            <span>Lynchburg, VA</span><span>|</span>
+            <a href="mailto:joshuacowell2005@gmail.com">joshuacowell2005@gmail.com</a><span>|</span>
+            <a href="https://joshuacowell.com">joshuacowell.com</a>
           </div>
-        </div>
+        </header>
 
-        {/* Education */}
         <section className="resume__section">
-          <h2 className="resume__section-title">EDUCATION</h2>
+          <h2 className="resume__section-title">Education</h2>
           <div className="resume__education-item">
             <div className="resume__item-header">
-              <h3 className="resume__item-title">
-                Bachelor of Science in Mechanical Engineering
-              </h3>
-              <span className="resume__item-date">
-                Expected Graduation: May 2027
-              </span>
+              <h3 className="resume__item-title">Bachelor of Science in Mechanical Engineering</h3>
+              <span className="resume__item-date">Expected May 2027</span>
             </div>
-            <p className="resume__item-subtitle">
-              Liberty University, Lynchburg, VA
-            </p>
-            <p className="resume__gpa">GPA: 3.85</p>
-            <p className="resume__coursework">
-              <strong>Relevant Coursework:</strong> Fluid Dynamics, Heat Transfer, Thermodynamics I &amp; II, Thermal-Fluids Laboratory, Differential Equations, Dynamics, Materials Engineering, Statics, Calculus I-III, Computer-Aided Engineering
-            </p>
-            <p className="resume__activities">
-              <strong>Activities:</strong> American Nuclear Society (ANS) — Founding Member (Nov 2025)
-            </p>
+            <div className="resume__item-header">
+              <p className="resume__item-subtitle">Liberty University, Lynchburg, VA</p>
+              <span className="resume__item-date">GPA: 3.85</span>
+            </div>
+            <p className="resume__coursework"><strong>Selected Coursework:</strong> Dynamics, Fluid Dynamics, Heat Transfer, Materials Engineering, Differential Equations, Thermal-Fluids Laboratory</p>
+            <p className="resume__activities"><strong>Founding Member:</strong> American Nuclear Society (ANS) student chapter (2025); AIAA student chapter (2026)</p>
+            <p className="resume__activities"><strong>Leadership:</strong> Liberty Rocketry -- Chairman, Board of Advisors (Jul 2026 - Present)</p>
           </div>
         </section>
 
-        {/* Professional Experience */}
         <section className="resume__section">
-          <h2 className="resume__section-title">PROFESSIONAL EXPERIENCE</h2>
-
-          <div className="resume__experience-item">
-            <div className="resume__item-header">
-              <h3 className="resume__item-title">
-                Thermal Hydraulics Engineering Intern
-              </h3>
-              <span className="resume__item-date">May 2025 - Dec 2025</span>
-            </div>
-            <p className="resume__company">Framatome Nuclear</p>
-            <ul className="resume__bullets">
-              <li>
-                Developed a predictive wear model in Python for safety-critical
-                reactor components, achieving 75% improvement in accuracy over
-                legacy methods.
-              </li>
-              <li>
-                Engineered a Python algorithm processing 6-dimensional datasets to
-                calculate safe operating limits, reducing analysis time from
-                1000+ hours to minutes.
-              </li>
-              <li>
-                Performed system-level thermal-hydraulic and flow-induced
-                vibration (FIV) analysis to support component qualification.
-              </li>
-              <li>
-                Authored technical documentation and presented findings to
-                engineering leadership; awarded $2,500 for presentation
-                excellence.
-              </li>
-            </ul>
-          </div>
+          <h2 className="resume__section-title">Engineering Experience</h2>
+          <Experience title="Advanced Weapons Systems Analyst" date="May 2026 - Present" company="Central Intelligence Agency (CIA)" bullets={[
+            "Conduct testing of warhead systems and analyze results to calibrate simulation models",
+            "Develop a Python-based geospatial analysis tool for operational planning, leveraging Claude Mythos to refine the program and meet team requirements",
+            "Conduct technical assessments of advanced unmanned systems and collaborate with multidisciplinary engineering teams to evaluate classified capabilities, translating findings into actionable intelligence for senior leadership and policymakers",
+            "Brief high-level Agency officials and write concise analytic products that communicate complex technical data in clear, decision-ready formats",
+          ]} />
 
           <div className="resume__experience-item">
             <div className="resume__item-header">
               <h3 className="resume__item-title">Chief Systems Engineer and Team Lead</h3>
-              <span className="resume__item-date">June 2025 - Present</span>
+              <span className="resume__item-date">Jun 2025 - Jul 2026</span>
             </div>
-            <p className="resume__company">
-              Liberty Rocketry (9th of 156 international teams, 2024)
+            <p className="resume__company">Liberty Rocketry</p>
+            <p className="resume__earlier-roles">
+              <span>Earlier roles:</span> Assistant Chief Engineer; Senior Structural Engineer; Fin Fluid-Dynamics Engineer
             </p>
             <ul className="resume__bullets">
-              <li>
-                Lead a cross-functional team of 60+ members in the design,
-                integration, and verification of high-powered rocket systems.
-              </li>
-              <li>
-                Direct systems engineering decisions across propulsion,
-                avionics, recovery, and aerodynamics subsystems.
-              </li>
-              <li>
-                Manage requirements definition, interface control, and
-                configuration management throughout the development lifecycle.
-              </li>
-              <li>
-                Oversee a $16,000+ project budget, vendor coordination, and
-                schedule milestones for competition campaigns.
-              </li>
-              <li>
-                Perform verification and validation (V&amp;V) using SolidWorks,
-                ANSYS, and MATLAB for subsystem models.
-              </li>
+              <li>Placed 18th of 141 international collegiate teams at the 2026 IREC</li>
+              <li>Led a 60-member student team in the design, testing, and launch readiness of a high-powered rocket</li>
+              <li>Oversaw engineering decisions across propulsion, avionics, recovery, and aerodynamics subsystems</li>
+              <li>Facilitated communication among internal teams, external vendors, and university faculty to improve project execution</li>
+              <li>Reviewed SolidWorks, ANSYS, MATLAB, OpenRocket, and RocketPy models and simulations used for team design decisions</li>
             </ul>
           </div>
 
-          <div className="resume__experience-item">
-            <div className="resume__item-header">
-              <h3 className="resume__item-title">
-                Lead Undergraduate Research Assistant
-              </h3>
-              <span className="resume__item-date">Sep 2024 - Present</span>
-            </div>
-            <p className="resume__company">Liberty University</p>
-            <ul className="resume__bullets">
-              <li>
-                Lead a team of 5 researchers conducting split-Hopkinson pressure
-                bar (SHPB) testing for dynamic material characterization.
-              </li>
-              <li>
-                Design test procedures and fixtures for high-strain-rate
-                experiments; analyze results using electron microscopy and
-                high-speed imaging.
-              </li>
-            </ul>
-          </div>
+          <Experience title="Thermal Hydraulics Engineering Intern" date="May 2025 - Dec 2025" company="Framatome Nuclear" bullets={[
+            "Developed and validated a Python predictive-wear model against documented component wear, reducing prediction error by 75% versus the legacy model",
+            "Built a Python/xarray algorithm processing six-dimensional datasets to calculate safe operating limits, reducing analysis time from 800+ hours to minutes",
+            "Performed system-level thermal-hydraulic and FIV analyses using AFT Fathom and custom tools to support component qualification",
+            "Authored technical documentation and presented findings to engineering leadership; received a $2,500 technical-presentation award",
+          ]} />
 
-          <div className="resume__experience-item">
-            <div className="resume__item-header">
-              <h3 className="resume__item-title">Camp Counselor</h3>
-              <span className="resume__item-date">May 2024 - Aug 2024</span>
-            </div>
-            <p className="resume__company">Woodlands Camp, GA</p>
-            <ul className="resume__bullets">
-              <li>
-                Provided 24-hour care during weeklong outdoor camping trips with
-                12 children per week (ages 8 to 18), teaching survival skills,
-                rock climbing, whitewater rafting, horseback riding, and cave
-                camping.
-              </li>
-            </ul>
-          </div>
+          <Experience title="Lead Undergraduate Research Assistant" date="Sep 2024 - Present" company="Liberty University" bullets={[
+            "Lead a five-person team conducting split-Hopkinson pressure bar (SHPB) testing for dynamic material characterization",
+            "Develop test procedures and fixtures; use PicoScope strain data to generate stress-strain curves and correlate high-speed imaging with SEM results",
+          ]} />
         </section>
 
-        {/* Technical Skills */}
         <section className="resume__section">
-          <h2 className="resume__section-title">TECHNICAL SKILLS</h2>
-          <ul className="resume__bullets">
-            <li>
-              <strong>Analysis &amp; CAE:</strong> ANSYS Fluent, ANSYS
-              Mechanical, AFT Fathom, OpenRocket, RocketPy, FEA, CFD
-            </li>
-            <li>
-              <strong>CAD &amp; Design:</strong> SolidWorks, Onshape, Technical
-              Drawing, 3D Printing, CNC Machining
-            </li>
-            <li>
-              <strong>Programming:</strong> Python (NumPy, Xarray, Pandas),
-              MATLAB, Data Analysis, Automation
-            </li>
-            <li>
-              <strong>Laboratory:</strong> Scanning Electron Microscope (SEM),
-              High Speed Imaging, Material Testing
-            </li>
+          <h2 className="resume__section-title">Technical Skills</h2>
+          <ul className="resume__bullets resume__skills">
+            <li><strong>Systems &amp; Test:</strong> System integration, test planning, model calibration, subsystem coordination, technical documentation</li>
+            <li><strong>Analysis &amp; CAE:</strong> ANSYS Fluent, ANSYS Mechanical, AFT Fathom, OpenRocket, RocketPy, CFD, FEA</li>
+            <li><strong>CAD &amp; Manufacturing:</strong> SolidWorks, Onshape, GD&amp;T, technical drawings, 3D printing, CNC machining</li>
+            <li><strong>Programming &amp; Lab:</strong> Python (NumPy, pandas, xarray), MATLAB, SHPB testing, SEM, high-speed imaging</li>
           </ul>
         </section>
 
-        {/* Projects */}
         <section className="resume__section">
-          <h2 className="resume__section-title">PROJECTS</h2>
-
-          <div className="resume__project-item">
-            <h3 className="resume__project-title">
-              Predictive Wear Model – Nuclear Component Lifecycle Analysis
-            </h3>
-            <ul className="resume__bullets">
-              <li>
-                Developed a Python-based predictive model for safety-critical
-                components, improving failure prediction accuracy by 75%
-              </li>
-            </ul>
-          </div>
-
-          <div className="resume__project-item">
-            <h3 className="resume__project-title">
-              Automated Operating Limit Analysis Tool
-            </h3>
-            <ul className="resume__bullets">
-              <li>
-                Engineered a Python automation framework reducing 1000+ hours of
-                manual engineering calculations to minutes
-              </li>
-            </ul>
-          </div>
-
-          <div className="resume__project-item">
-            <h3 className="resume__project-title">
-              Heat Exchanger Thermal-Hydraulic Optimization
-            </h3>
-            <ul className="resume__bullets">
-              <li>
-                Performed CFD analysis using ANSYS Fluent to optimize heat
-                exchanger thermal performance and flow characteristics
-              </li>
-            </ul>
-          </div>
-
-          <div className="resume__project-item">
-            <h3 className="resume__project-title">
-              Unmanned Aerial Vehicle (UAV) Design &amp; Analysis
-            </h3>
-            <ul className="resume__bullets">
-              <li>
-                Designed a modular UAV airframe with rapid prototyping
-                capability; validated aerodynamics through CFD simulation
-              </li>
-            </ul>
-          </div>
-
-          <div className="resume__project-item">
-            <h3 className="resume__project-title">
-              3D Printed Model Rocket
-            </h3>
-            <ul className="resume__bullets">
-              <li>
-                Engineered a fully 3D printed rocket achieving Mach 0.5+ and 3,000 ft altitude; performed ANSYS CFD analysis for aerodynamic optimization
-              </li>
-            </ul>
-          </div>
-
-          <div className="resume__project-item">
-            <h3 className="resume__project-title">
-              High Strain Rate Bone Research
-            </h3>
-            <ul className="resume__bullets">
-              <li>
-                Investigating the dynamic loading behavior of human bone using
-                Split Hopkinson Pressure Bar for conference presentation
-              </li>
-            </ul>
-          </div>
+          <h2 className="resume__section-title">Selected Projects</h2>
+          <Project title="Unmanned Aerial Vehicle Design & Analysis" tools="SolidWorks, ANSYS Fluent, 3D Printing">
+            Designed and integrated a modular UAV airframe, propulsion system, and payload using replaceable 3D-printed components; evaluated performance with CFD
+          </Project>
+          <Project title="3D-Printed Model Rocket" tools="ANSYS Fluent, OpenRocket, Additive Manufacturing">
+            Engineered a reusable threaded airframe with a hybrid recovery system; simulations predicted Mach 0.5+ and approximately 3,000 ft altitude
+          </Project>
         </section>
       </div>
     </div>
   );
 };
+
+const Experience = ({ title, date, company, bullets }) => (
+  <div className="resume__experience-item">
+    <div className="resume__item-header">
+      <h3 className="resume__item-title">{title}</h3>
+      <span className="resume__item-date">{date}</span>
+    </div>
+    <p className="resume__company">{company}</p>
+    <ul className="resume__bullets">{bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>
+  </div>
+);
+
+const Project = ({ title, tools, children }) => (
+  <div className="resume__project-item">
+    <h3 className="resume__project-title">{title}</h3>
+    <p className="resume__project-tools">Tools: {tools}</p>
+    <ul className="resume__bullets"><li>{children}</li></ul>
+  </div>
+);
 
 export default Resume;
