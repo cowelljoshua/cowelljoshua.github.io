@@ -44,7 +44,7 @@ const Resume = () => {
 
         <section className="resume__section">
           <h2 className="resume__section-title">Engineering Experience</h2>
-          <Experience title="Advanced Weapons Systems Analyst" date="May 2026 - Present" company="Central Intelligence Agency (CIA)" bullets={[
+          <Experience title="Advanced Weapons Systems Analyst Intern" date="May 2026 - Present" company="Central Intelligence Agency (CIA)" bullets={[
             "Conduct testing of warhead systems and analyze results to calibrate simulation models",
             "Develop a Python-based geospatial analysis tool for operational planning, leveraging Claude Mythos to refine the program and meet team requirements",
             "Conduct technical assessments of advanced unmanned systems and collaborate with multidisciplinary engineering teams to evaluate classified capabilities, translating findings into actionable intelligence for senior leadership and policymakers",

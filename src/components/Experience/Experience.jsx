@@ -9,7 +9,7 @@ const Experience = () => {
   const experiences = [
     {
       company: "Central Intelligence Agency (CIA)",
-      role: "Advanced Weapons Systems Analyst",
+      role: "Advanced Weapons Systems Analyst Intern",
       date: "May 2026 - Present",
       description: [
         "Conduct testing of warhead systems and analyze results to calibrate simulation models",

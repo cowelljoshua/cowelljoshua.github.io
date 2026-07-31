@@ -1,0 +1,101 @@
+% Shared formatting for Joshua Cowell resume variants.
+\usepackage[left=0.50in,right=0.50in,top=0.48in,bottom=0.48in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{setspace}
+
+\definecolor{navyblue}{RGB}{0,40,85}
+\definecolor{darkgray}{RGB}{50,50,50}
+\definecolor{medgray}{RGB}{95,95,95}
+
+\hypersetup{colorlinks=false,pdfborder={0 0 0}}
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+\setlist[itemize]{
+  leftmargin=0.16in,
+  topsep=1.5pt,
+  itemsep=0.6pt,
+  parsep=0pt,
+  partopsep=0pt,
+  label=\textcolor{navyblue}{\textbullet}
+}
+
+\newcommand{\resumeSection}[1]{%
+  \vspace{5pt}%
+  {\normalsize\bfseries\textcolor{navyblue}{\MakeUppercase{#1}}}\par
+  \vspace{1pt}%
+  {\color{navyblue}\hrule height 0.5pt}%
+  \vspace{3pt}%
+}
+
+\newcommand{\resumeEntry}[3]{%
+  \textbf{#1} \hfill \textcolor{medgray}{#2} \\
+  \textit{\textcolor{darkgray}{#3}}\par
+}
+
+\newcommand{\companyEntry}[2]{%
+  \textbf{#1} \hfill \textcolor{medgray}{#2}\par
+}
+
+\newcommand{\roleLine}[2]{%
+  \textbf{#1} \hfill \textcolor{medgray}{#2}\par
+}
+\newcommand{\currentRoleLine}[2]{%
+  {\small\textit{\textcolor{darkgray}{Current: #1}}} \hfill \textcolor{medgray}{#2}\par
+}
+
+
+\newcommand{\earlierRoles}{%
+  {\footnotesize\textit{Earlier roles: Assistant Chief Engineer; Senior Structural Engineer; Fin Fluid-Dynamics Engineer}}\par
+}
+
+\newcommand{\projectEntry}[1]{\textbf{#1}\par}
+
+\newcommand{\resumeHeader}{%
+  \begin{center}
+    {\fontsize{20}{22}\selectfont\bfseries\textcolor{navyblue}{JOSHUA COWELL}}
+
+    \vspace{3pt}
+
+    {\small\textbf{\textcolor{navyblue}{Active Top Secret / SCI Clearance}}
+    \enspace\textcolor{medgray}{$|$}\enspace
+    \textbf{\textcolor{navyblue}{Full-Scope Polygraph}}}
+
+    \vspace{3pt}
+
+    {\small\color{darkgray}
+      Lynchburg, VA
+      \enspace\textcolor{medgray}{$|$}\enspace
+      \href{mailto:joshuacowell2005@gmail.com}{joshuacowell2005@gmail.com}
+      \enspace\textcolor{medgray}{$|$}\enspace
+      \href{https://joshuacowell.com}{joshuacowell.com}
+    }
+  \end{center}
+}
+
+\newcommand{\educationBlock}[1]{%
+  \resumeSection{Education}
+  \textbf{Bachelor of Science in Mechanical Engineering} \hfill \textcolor{medgray}{Expected May 2027} \\
+  \textit{\textcolor{darkgray}{Liberty University, Lynchburg, VA}} \hfill \textcolor{medgray}{GPA: 3.85}
+
+  \vspace{2pt}
+  {\small\textit{Selected Coursework:} #1}\par
+  \vspace{1pt}
+  {\small\textit{Founding Member:} American Nuclear Society (ANS) student chapter (2025); AIAA student chapter (2026)}\par
+  {\small\textit{Leadership:} Liberty Rocketry -- Chairman, Board of Advisors (Jul 2026 -- Present)}\par
+}
+
+\newcommand{\researchEntry}{%
+  \resumeEntry{Lead Undergraduate Research Assistant}{Sep 2024 -- Present}{Liberty University}
+  \begin{itemize}
+    \item Lead a five-person team conducting split-Hopkinson pressure bar (SHPB) testing for dynamic material characterization
+    \item Develop test procedures and fixtures; use PicoScope strain data to generate stress-strain curves and correlate high-speed imaging with SEM results
+  \end{itemize}
+}

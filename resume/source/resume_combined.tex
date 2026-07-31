@@ -1,0 +1,60 @@
+\documentclass[10pt,letterpaper]{article}
+\input{resume/source/resume_style.tex}
+
+\begin{document}
+\resumeHeader
+\educationBlock{Dynamics, Fluid Dynamics, Heat Transfer, Thermodynamics I \& II, Differential Equations, Thermal-Fluids Laboratory}
+
+\resumeSection{Engineering Experience}
+
+\resumeEntry{Advanced Weapons Systems Analyst Intern}{May 2026 -- Present}{Central Intelligence Agency (CIA)}
+\begin{itemize}
+  \item Conduct testing of warhead systems and analyze results to calibrate simulation models
+  \item Develop a Python-based geospatial analysis tool for operational planning that meets team requirements
+  \item Conduct technical assessments of advanced unmanned systems with multidisciplinary engineering teams, translating findings into actionable intelligence for senior leadership and policymakers
+  \item Brief senior Agency officials and write concise analytic products that communicate complex technical data in decision-ready formats
+\end{itemize}
+
+\vspace{2pt}
+\resumeEntry{Thermal Hydraulics Engineering Intern}{May 2025 -- Dec 2025}{Framatome Nuclear}
+\begin{itemize}
+  \item Developed and validated a Python predictive-wear model against documented component wear, reducing prediction error by 75\% versus the legacy model
+  \item Built a Python/xarray algorithm processing six-dimensional datasets to calculate safe operating limits, reducing analysis time from 800+ hours to minutes
+  \item Performed system-level thermal-hydraulic and flow-induced-vibration (FIV) analyses using AFT Fathom and custom tools to support component qualification
+  \item Authored technical documentation and presented findings to engineering leadership; received a \$2,500 technical-presentation award
+\end{itemize}
+
+\vspace{2pt}
+\resumeEntry{Chief Systems Engineer and Team Lead}{Jun 2025 -- Jul 2026}{Liberty Rocketry}
+\earlierRoles
+\begin{itemize}
+  \item Placed 18th of 141 international collegiate teams at the 2026 IREC
+  \item Led a 60-member student team in the design, testing, and launch readiness of a high-powered rocket
+  \item Oversaw engineering decisions across propulsion, avionics, recovery, and aerodynamics subsystems
+  \item Facilitated communication among internal teams, external vendors, and university faculty to improve project execution
+  \item Reviewed SolidWorks, ANSYS, MATLAB, OpenRocket, and RocketPy models and simulations used for team design decisions
+\end{itemize}
+
+\vspace{2pt}
+\researchEntry
+
+\resumeSection{Technical Skills}
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}l X@{}}
+Systems \& Test: & System integration, test planning, model calibration, subsystem coordination, technical documentation \\
+Thermal \& CAE: & Thermal-hydraulics, heat transfer, FIV, ANSYS Fluent, ANSYS Mechanical, AFT Fathom, CFD, FEA \\
+CAD \& Manufacturing: & SolidWorks, Onshape, GD\&T, technical drawings, 3D printing, CNC machining \\
+Programming \& Lab: & Python (NumPy, pandas, xarray), MATLAB, SHPB testing, SEM, high-speed imaging
+\end{tabularx}
+
+\resumeSection{Selected Projects}
+\projectEntry{Heat Exchanger Thermal-Hydraulic Optimization \textnormal{\textit{-- MATLAB, ANSYS Fluent, SolidWorks}}}
+\begin{itemize}
+  \item Wrote MATLAB optimization code that evaluated 104 million crossflow and 287 million annular geometries against thermal, dimensional, and annual-cost constraints
+  \item Validated the selected annular design against ANSYS Fluent CFD across heat-transfer and effectiveness metrics
+\end{itemize}
+\projectEntry{Unmanned Aerial Vehicle Design \& Analysis \textnormal{\textit{-- SolidWorks, ANSYS Fluent, 3D Printing}}}
+\begin{itemize}
+  \item Designed and integrated a modular UAV airframe, propulsion system, and payload using replaceable 3D-printed components; evaluated performance with CFD
+\end{itemize}
+
+\end{document}
