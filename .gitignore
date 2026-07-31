@@ -34,3 +34,33 @@ coverage/
 
 # Misc
 *.log
+
+# ---------------------------------------------------------------
+# Resume sources: full-detail versions are LOCAL ONLY.
+# Only resume_public.tex (sanitized) is tracked and served.
+# Do not `git add -f` anything else in here.
+# ---------------------------------------------------------------
+resume/source/*
+!resume/source/resume_public.tex
+resume/private/
+resume/archive/
+
+# Internal notes / tooling — local only. These describe what was sanitized and
+# where the residual exposure is; that roadmap must not be published.
+resume/README.md
+resume/check_public_pdf.py
+
+# LaTeX build artifacts
+*.aux
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Local scratch
+archive/
+output/
+tmp/
+
+# Local agent/tooling config
+.claude/

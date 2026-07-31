@@ -1,0 +1,205 @@
+% PUBLIC / SANITIZED RESUME -- served at joshuacowell.com/resume/
+% Do NOT add employer names, program names, or classified duty detail here.
+% Full-detail versions live in resume/source/ and are gitignored.
+\documentclass[10pt,letterpaper]{article}
+
+% ============================================
+% PACKAGES
+% ============================================
+\usepackage[margin=0.4in, top=0.4in, bottom=0.4in]{geometry}
+\usepackage[T1]{fontenc}
+% Times-like serif font widely used on professional/defense resumes
+\usepackage{mathptmx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{setspace}
+
+% ============================================
+% COLORS - Professional Navy for Defense
+% ============================================
+\definecolor{navyblue}{RGB}{0, 40, 85}
+\definecolor{darkgray}{RGB}{50, 50, 50}
+\definecolor{medgray}{RGB}{100, 100, 100}
+
+% ============================================
+% HYPERLINK SETUP
+% ============================================
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0}
+}
+
+% ============================================
+% REMOVE PAGE NUMBERS
+% ============================================
+\pagenumbering{gobble}
+
+% ============================================
+% SECTION FORMATTING
+% ============================================
+\titleformat{\section}{\normalsize\bfseries}{}{0em}{\textcolor{navyblue}}[\textcolor{navyblue}{\titlerule}]
+\titlespacing{\section}{0pt}{8pt}{4pt}
+
+% Uppercase section titles manually
+\renewcommand{\section}[1]{
+    \vspace{5pt}
+    {\normalsize\bfseries\textcolor{navyblue}{\MakeUppercase{#1}}}
+    \vspace{0pt}
+    
+    {\color{navyblue}\hrule height 0.5pt}
+    \vspace{3pt}
+}
+
+% ============================================
+% SPACING
+% ============================================
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=0.15in, topsep=1pt, itemsep=0pt, parsep=0pt, label=\textcolor{navyblue}{\textbullet}}
+
+% ============================================
+% CUSTOM COMMANDS
+% ============================================
+\newcommand{\resumeEntry}[4]{
+    \textbf{#1} \hfill \textcolor{medgray}{#2} \\
+    \textit{\textcolor{darkgray}{#3}} \ifx&#4&\else\hfill \textcolor{medgray}{#4}\fi
+    \vspace{0pt}
+}
+
+\newcommand{\projectEntry}[1]{
+    \textbf{#1}
+    \vspace{0pt}
+}
+
+% ============================================
+% DOCUMENT
+% ============================================
+\begin{document}
+
+% ============================================
+% HEADER
+% ============================================
+\begin{center}
+    {\fontsize{20}{24}\selectfont\bfseries\textcolor{navyblue}{JOSHUA COWELL}}
+
+    \vspace{3pt}
+
+    {\small\textbf{\textcolor{navyblue}{Active Top Secret / SCI Clearance}} \enspace\textcolor{medgray}{$|$}\enspace \textbf{\textcolor{navyblue}{Full-Scope Polygraph}}}
+
+    \vspace{3pt}
+
+    {\small\color{darkgray}
+    Lynchburg, VA \enspace\textcolor{medgray}{$|$}\enspace
+    \href{mailto:joshuacowell2005@gmail.com}{joshuacowell2005@gmail.com} \enspace\textcolor{medgray}{$|$}\enspace
+    \href{https://joshuacowell.com}{joshuacowell.com}
+    }
+\end{center}
+
+\vspace{0pt}
+
+% ============================================
+% EDUCATION
+% ============================================
+\section{Education}
+
+\textbf{Bachelor of Science in Mechanical Engineering} \hfill \textcolor{medgray}{Expected May 2027} \\
+\textit{\textcolor{darkgray}{Liberty University, Lynchburg, VA}} \hfill \textcolor{medgray}{GPA: 3.85}
+
+\vspace{1pt}
+{\small \textit{Selected Coursework:} Dynamics, Fluid Dynamics, Heat Transfer, Materials Engineering, Differential Equations, Thermal-Fluids Laboratory}
+
+\vspace{1pt}
+{\small \textit{Founding Member:} American Nuclear Society (ANS) student chapter (2025); AIAA student chapter (2026)}
+
+\vspace{1pt}
+{\small \textit{Leadership:} Liberty Rocketry -- Chairman, Board of Advisors (Jul 2026 -- Present)}
+
+\vspace{1pt}
+
+% ============================================
+% ENGINEERING EXPERIENCE
+% ============================================
+\section{Engineering Experience}
+
+\resumeEntry{Advanced Weapons Systems Analyst Intern}{May 2026 -- Present}{U.S. Government}{}
+\begin{itemize}
+    \item Conduct physical testing of engineering systems and analyze results to calibrate simulation models
+    \item Developed a Python-based geospatial analysis tool to meet team requirements, using AI-assisted development tooling to iterate on the design
+    \item Perform technical assessments of advanced engineering systems alongside multidisciplinary teams, translating findings into decision-ready summaries
+    \item Brief senior leadership and author concise written products that communicate complex technical data clearly
+    \item \textit{Additional detail available upon request}
+\end{itemize}
+
+\vspace{1pt}
+
+\resumeEntry{Chief Systems Engineer and Team Lead}{Jun 2025 -- Jul 2026}{Liberty Rocketry}{}
+
+\vspace{1pt}
+{\small \textit{\textcolor{darkgray}{Earlier roles: Assistant Chief Engineer; Senior Structural Engineer; Fin Fluid-Dynamics Engineer}}}
+\begin{itemize}
+    \item Placed 18th of 141 international collegiate teams at the 2026 IREC
+    \item Led a 60-member student team in the design, testing, and launch readiness of a high-powered rocket
+    \item Oversaw engineering decisions across propulsion, avionics, recovery, and aerodynamics subsystems
+    \item Facilitated communication among internal teams, external vendors, and university faculty to improve project execution
+    \item Reviewed SolidWorks, ANSYS, MATLAB, OpenRocket, and RocketPy models and simulations used for team design decisions
+\end{itemize}
+
+\vspace{1pt}
+
+\resumeEntry{Thermal Hydraulics Engineering Intern}{May 2025 -- Dec 2025}{Framatome Nuclear}{}
+\begin{itemize}
+    \item Developed and validated a Python predictive-wear model against documented component wear, reducing prediction error by 75\% versus the legacy model
+    \item Built a Python/xarray algorithm processing six-dimensional datasets to calculate safe operating limits, reducing analysis time from 800+ hours to minutes
+    \item Performed system-level thermal-hydraulic and FIV analyses using AFT Fathom and custom tools to support component qualification
+    \item Authored technical documentation and presented findings to engineering leadership; received a \$2,500 technical-presentation award
+\end{itemize}
+
+\vspace{1pt}
+
+\resumeEntry{Lead Undergraduate Research Assistant}{Sep 2024 -- Present}{Liberty University}{}
+\begin{itemize}
+    \item Lead a five-person team conducting split-Hopkinson pressure bar (SHPB) testing for dynamic material characterization
+    \item Develop test procedures and fixtures; use PicoScope strain data to generate stress-strain curves and correlate high-speed imaging with SEM results
+\end{itemize}
+
+\vspace{1pt}
+
+% ============================================
+% TECHNICAL SKILLS
+% ============================================
+\section{Technical Skills}
+
+\begin{tabularx}{\textwidth}{@{}>{}l X@{}}
+\textbf{Systems \& Test:} & System integration, test planning, model calibration, subsystem coordination, technical documentation \\[2pt]
+\textbf{Analysis \& CAE:} & ANSYS Fluent, ANSYS Mechanical, AFT Fathom, OpenRocket, RocketPy, CFD, FEA \\[2pt]
+\textbf{CAD \& Manufacturing:} & SolidWorks, Onshape, GD\&T, technical drawings, 3D printing, CNC machining \\[2pt]
+\textbf{Programming \& Lab:} & Python (NumPy, pandas, xarray), MATLAB, SHPB testing, SEM, high-speed imaging \\
+\end{tabularx}
+
+\vspace{1pt}
+
+% ============================================
+% SELECTED PROJECTS
+% ============================================
+\section{Selected Projects}
+
+\projectEntry{Unmanned Aerial Vehicle Design \& Analysis}
+
+{\small \textit{\textcolor{darkgray}{Tools: SolidWorks, ANSYS Fluent, 3D Printing}}}
+\begin{itemize}
+    \item Designed and integrated a modular UAV airframe, propulsion system, and payload using replaceable 3D-printed components; evaluated performance with CFD
+\end{itemize}
+
+\vspace{1pt}
+
+\projectEntry{3D-Printed Model Rocket}
+
+{\small \textit{\textcolor{darkgray}{Tools: ANSYS Fluent, OpenRocket, Additive Manufacturing}}}
+\begin{itemize}
+    \item Engineered a reusable threaded airframe with a hybrid recovery system; simulations predicted Mach 0.5+ and approximately 3,000 ft altitude
+\end{itemize}
+
+\end{document}
