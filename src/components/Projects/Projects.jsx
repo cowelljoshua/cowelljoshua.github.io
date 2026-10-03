@@ -330,6 +330,30 @@ const Projects = () => {
       </div>
 
       <div className="projects__grid">
+        <a className="project-card project-card--beamlab" href="/beamlab/">
+          <div className="project-card__visual">
+            <img
+              src="/beamlab/reports/demo-desktop.png"
+              alt="BeamLab interactive cantilever with design inputs and neural predictions"
+              loading="lazy"
+              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
+            />
+          </div>
+          <div className="project-card__content">
+            <h3 className="project-card__title">BeamLab: Neural Network for Beam Response</h3>
+            <p className="project-card__description">
+              An AI-assisted engineering prototype that predicts cantilever deflection
+              and bending stress. Explore the trained model, compare it with beam
+              equations, and inspect independent ANSYS checks.
+            </p>
+            <div className="project-card__tags">
+              {["Python", "NumPy", "Neural Networks", "ANSYS", "Model Validation"].map((tag) => (
+                <span key={tag} className="project-card__tag">{tag}</span>
+              ))}
+            </div>
+            <div className="project-card__cta"><span>Try the Live Demo →</span></div>
+          </div>
+        </a>
         {projects.map((project) => (
           <article
             key={project.id}
